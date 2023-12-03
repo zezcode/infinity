@@ -26,9 +26,6 @@ php xcat User createAdmin
 
 
 domain=$(dirname "$(readlink -f "$0")")
-
-mkdir -p /www/wwwroot/$domain/storage/framework/smarty/compile/
-
-sudo chmod -R 777 /www/wwwroot/$domain/storage/framework/smarty/compile/
- 
+mkdir -p $domain/storage/framework/smarty/compile/
+sudo chmod -R 777 $domain/storage/framework/smarty/compile/
 echo "Xây dựng máy chủ InfinityPanel thành công!"
