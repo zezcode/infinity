@@ -577,7 +577,7 @@
         "is_public": 1,
         "type": "array",
         "default": "USDT",
-        "mark": "提现方式"
+        "mark": "Phương thức rút tiền"
     },
     {
         "id": null,
