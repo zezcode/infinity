@@ -277,7 +277,7 @@
 																	</tr>
                                                                     
                                                                     <tr>
-                                                                        <td>Hạn sử dụng/td>
+                                                                        <td>Hạn sử dụng</td>
                                                                         <td>{if $user->class <= 0}Chưa mua gói{else}{$user->class_expire}{/if}</td>
                                                                         
 																	</tr>
