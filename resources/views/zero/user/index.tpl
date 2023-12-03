@@ -324,7 +324,7 @@
 			<div class="text-dark-75 order-2 order-md-1">
 				&copy;<script>
 					document.write(new Date().getFullYear());
-				</script>,&nbsp;<a>Bản quyền thuộc về&nbsp;{$config["website_name"]}</a>
+				</script>&nbsp;<a>Bản quyền thuộc về&nbsp;{$config["website_name"]}</a>
 			</div>
 		</div>
 	</div>
