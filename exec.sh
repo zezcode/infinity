@@ -24,7 +24,6 @@ php xcat Tool importAllSettings
 
 php xcat User createAdmin
 
-
 domain=$(dirname "$(readlink -f "$0")")
 mkdir -p $domain/storage/framework/smarty/compile/
 sudo chmod -R 777 $domain/storage/framework/smarty/compile/
