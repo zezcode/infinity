@@ -1,0 +1,23 @@
+
+  - DOMAIN,clash.razord.top,DIRECT
+  - DOMAIN,yacd.haishan.me,DIRECT
+  - DOMAIN-SUFFIX,smtp,DIRECT
+  - DOMAIN-KEYWORD,aria2,DIRECT
+  - GEOSITE,category-ads-all,REJECT
+  - GEOSITE,telegram,✈️TELEGRAM
+  - GEOSITE,youtube,🖥YOUTUBE
+  - GEOSITE,netflix,📺NETFLIX
+  - GEOSITE,spotify,🎸SPOTIFY
+  - GEOSITE,google,💡GOOGLE
+  - GEOSITE,twitter,📡TWITTER
+  - GEOSITE,geolocation-!cn,🎯PROXY
+  - GEOIP,private,DIRECT
+  - GEOIP,telegram,✈️TELEGRAM
+  - GEOIP,twitter,📡TWITTER
+  - GEOIP,google,💡GOOGLE
+  - GEOIP,netflix,📺NETFLIX
+  - GEOIP,LAN,DIRECT
+  - GEOSITE,CN,DIRECT
+  - GEOIP,CN,DIRECT
+  - GEOIP,!CN,🎯PROXY
+  - MATCH,🛺OTHERS

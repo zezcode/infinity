@@ -1,0 +1,51 @@
+{
+    "require": {
+        "php": "^8.1",
+        "ext-curl": "*",
+        "ext-json": "*",
+        "ext-mysqli": "*",
+        "ext-xml": "*",
+        "aws/aws-sdk-php": "3.*",
+        "cloudflare/sdk": "*",
+        "firebase/php-jwt": "6.*",
+        "florianv/swap": "*",
+        "geoip2/geoip2": "~2.0",
+        "guzzlehttp/guzzle": "*",
+        "guzzlehttp/psr7": "*",
+        "illuminate/database": "10.*",
+        "illuminate/pagination": "10.*",
+        "illuminate/support": "10.*",
+        "irazasyed/telegram-bot-sdk": "3.*",
+        "league/html-to-markdown": "5.1.0",
+        "mailgun/mailgun-php": "*",
+        "nesbot/carbon": "2.66.0",
+        "php-curl-class/php-curl-class": "*",
+        "php-di/php-di": "*",
+        "php-http/guzzle7-adapter": "^1.0",
+        "phpmailer/phpmailer": "~6.0",
+        "ramsey/uuid": "4.*",
+        "sendgrid/sendgrid": "~7",
+        "sentry/sdk": "*",
+        "slim/http": "*",
+        "slim/slim": "4.*",
+        "smarty/smarty": "*",
+        "srmklive/paypal": "*",
+        "stripe/stripe-php": "^10",
+        "symfony/yaml": "6.1.*@dev",
+        "voku/anti-xss": "*",
+        "zeropanel/i18next-php": "*",
+        "zeuxisoo/slim-whoops": "0.7.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "config": {
+        "sort-packages": true,
+        "optimize-autoloader": true,
+        "allow-plugins": {
+            "php-http/discovery": true
+        }
+    }
+}
