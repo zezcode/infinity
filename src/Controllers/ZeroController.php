@@ -316,7 +316,7 @@ class ZeroController extends BaseController
                         'order_no'     => $rowData->order_no,
                         'created_at'   => date('Y-m-d H:i:s', $rowData->created_at),
                         'order_type'   => $rowData->orderType(),
-                        'action'       => '<a class="btn btn-sm btn-light-primary" href="/user/order/'.$rowData->order_no.'">' . $trans->t('details') . '</a>',
+                        'action'       => '<a class="btn btn-sm btn-light-primary" href="/user/order/'.$rowData->order_no.'">' . $trans->t('Chi tiết') . '</a>',
                     ];
                 })->toArray();
 

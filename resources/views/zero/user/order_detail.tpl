@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
     <head>
 	<title>{$config["website_name"]} Order Detail</title>
         
@@ -32,7 +32,7 @@
                                         
                                         <div class="card-header">
                                             <div class="card-title">
-                                                <h2>order #{$order->order_no}</h2>
+                                                <h2>{$trans->t('order')} #{$order->order_no}</h2>
                                             </div>
                                         </div>
                                         
@@ -44,15 +44,15 @@
                                                     
                                                     <thead>
                                                         <tr class="text-start text-gray-400 fw-bold fs-7 text-uppercase gs-0">
-                                                            <th class="min-w-175px">type</th>
-                                                            <th class="min-w-70px text-end">status</th>
+                                                            <th class="min-w-175px">{$trans->t('type')}</th>
+                                                            <th class="min-w-70px text-end">{$trans->t('status')}</th>
 															
-                                                            <th class="min-w-70px text-end">payment method</th>
+                                                            <th class="min-w-70px text-end">{$trans->t('payment method')}</th>
                                                             
-                                                            <th class="min-w-100px text-end">order number</th>
-                                                            <th class="min-w-70px text-end">quantity</th>
-                                                            <th class="min-w-100px text-end">price</th>
-                                                            <th class="min-w-100px text-end">total</th>
+                                                            <th class="min-w-100px text-end">{$trans->t('order number')}</th>
+                                                            <th class="min-w-70px text-end">{$trans->t('quantity')}</th>
+                                                            <th class="min-w-100px text-end">{$trans->t('price')}</th>
+                                                            <th class="min-w-100px text-end">{$trans->t('total')}</th>
                                                         </tr>
                                                     </thead>
                                                     
@@ -64,7 +64,7 @@
                                                                 <div class="d-flex align-items-center">
                                                                     <div class="ms-5">
                                                                         <a class="fw-bold text-gray-600 text-hover-primary">{$order_type[$order->order_type]}</a>
-                                                                        <div class="fs-7 text-muted">date: {date('Y-m-d H:i:s', $order->created_at)}</div>
+                                                                        <div class="fs-7 text-muted">{$trans->t('date')}: {date('Y-m-d H:i:s', $order->created_at)}</div>
                                                                     </div>
                                                                     
                                                                 </div>
@@ -72,11 +72,11 @@
                                                             
                                                             <td class="text-end">
                                                                 {if $order->order_status == '1'}
-                                                                <span class="badge badge-warning fs-6 fw-bold">pending</span>
+                                                                <span class="badge badge-warning fs-6 fw-bold">{$trans->t('pending')}</span>
                                                                 {else if $order->order_status == '2'}
-                                                                <span class="badge badge-success fs-6 fw-bold">paid</span>
+                                                                <span class="badge badge-success fs-6 fw-bold">{$trans->t('paid')}</span>
 																{else if $order->order_status == '0'}
-																<span class="badge badge-danger fs-6 fw-bold">invalid</span>	
+																<span class="badge badge-danger fs-6 fw-bold">{$trans->t('invalid')}</span>	
                                                                 {/if}   
                                                             </td>
 															
@@ -98,19 +98,19 @@
                                                                 <td class="text-end">{$order->credit_paid}</td>
                                                             </tr>                                                       
                                                             <tr>
-                                                                <td colspan="6" class="text-end">discount</td>
+                                                                <td colspan="6" class="text-end">{$trans->t('discount')}</td>
                                                                 <td class="text-end">{$order->discount_amount}</td>
                                                             </tr>
                                                         {/if}
                                                                                             
                                                         <tr>
-                                                            <td colspan="6" class="fs-3 text-dark text-end">total</td>
+                                                            <td colspan="6" class="fs-3 text-dark text-end">{$trans->t('total')}</td>
                                                             <td class="text-dark fs-3 fw-bolder text-end">{$order->order_total}</td>
                                                         </tr>
 														
 														{if $order->order_status == '2'}
 														<tr>
-                                                            <td colspan="6" class="fs-3 text-dark text-end">paid</td>
+                                                            <td colspan="6" class="fs-3 text-dark text-end">{$trans->t('paid')}</td>
                                                             <td class="text-dark fs-3 fw-bolder text-end">{$order->order_total}</td>
                                                         </tr>
 														{/if}
@@ -123,7 +123,7 @@
 											{if $order->order_status === 1}
                                                 {if $order->order_total != 0}
                                                     <div class="col-lg-12">
-                                                        <label class="col-form-label fs-3 fw-bold">payment method:</label>                                                       
+                                                        <label class="col-form-label fs-3 fw-bold">{$trans->t('payment method')}:</label>                                                       
                                                         <ul class="nav nav-pills d-flex flex-column flex-md-row justify-content-center" role="tablist" id="payment_method">                                                         
                                                             {foreach $payments as $payment}
                                                                 <li class="nav-item mb-3">
@@ -140,13 +140,13 @@
                                                 {/if}
                                                 <div class="text-center pt-15">
                                                     <button class="btn btn-primary" type="submit" data-kt-users-action="submit" onclick="KTUsersPayOrder('{$order->order_no}')">
-                                                        <span class="indicator-label">submit</span>
-                                                        <span class="indicator-progress">please wait
+                                                        <span class="indicator-label">{$trans->t('submit')}</span>
+                                                        <span class="indicator-progress">{$trans->t('please wait')}
                                                         <span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
                                                     </button>
                                                 </div>
                                                 {foreach from=$payments item=payment}
-                                                    {if ($payment->gateway == 'PayPal
+                                                    {if ($payment->gateway == 'PayPal')}
                                                         <script src="https://www.paypal.com/sdk/js?client-id=Aa69h7psOgN_5Gp20yOP0eOuYBKsKZapS0ZK_RvWTl57ZZTS_SDoCvtG3j0_1R_hcp2sSl8-2f7Jik5R&currency={$paypal_currency_unit}&disable-funding=credit,card"></script>
                                                         <!-- Set up a container element for the button -->
                                                         <div id="paypal-button-container" class="text-center"></div>
@@ -164,7 +164,7 @@
                         <div class="app_footer py-4 d-flex flex-lg-column" id="kt_app_footer">
                             <div class="app-container container-fluid d-flex flex-column flex-md-row flex-center flex-md-stack py-3">
                                 <div class="text-dark-75 order-2 order-md-1">
-                                    &copy;<script>document.write(new Date().getFullYear());</script>,&nbsp;<a>Bản quyền thuộc về&nbsp;{$config["website_name"]}</a>
+                                    &copy;<script>document.write(new Date().getFullYear());</script>,&nbsp;<a>{$config["website_name"]},&nbsp;Inc.&nbsp;All rights reserved.</a>
                                 </div>
                             </div>
                         </div>
@@ -175,7 +175,7 @@
 		{include file='include/global/scripts.tpl'}
         {include file='include/index/news.tpl'}
         {foreach from=$payments item=payment}
-            {if ($payment->gateway == 'PayPal
+            {if ($payment->gateway == 'PayPal')}
                 <script>
                     paypal
                     .Buttons({

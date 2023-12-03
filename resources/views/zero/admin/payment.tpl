@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="vi">
     <head>
-        <title>{$config["website_name"]} 支付设置</title>
+        <title>{$config["website_name"]} Quản lý thanh toán</title>
         
         <meta charset="UTF-8" />
         <meta name="renderer" content="webkit" />
@@ -29,10 +29,10 @@
                                 <div id="kt_app_content_container" class="app-container container-xxl">
                                     <div class="card">
                                         <div class="card-header">
-                                            <div class="card-title text-dark fs-3 fw-bolder">支付配置</div>
+                                            <div class="card-title text-dark fs-3 fw-bolder">Quản lý thanh toán</div>
                                             <div class="card-toolbar">
                                                 <button class="btn btn-primary btn-sm fs-bold" data-bs-toggle="modal" data-bs-target="#zero_modal_create_payment">
-                                                    <i class="bi bi-plus-lg fs-2"></i>添加支付方式
+                                                    <i class="bi bi-plus-lg fs-2"></i>Thêm phương thức thanh toán
                                                 </button>
                                             </div>
                                         </div>
@@ -67,37 +67,39 @@
                     </div>
                     <div class="modal-body scroll-y pt-0 pb-15 px-5 px-xl-20">
                         <div class="mb-13 text-center">
-                            <h1 class="mb-3 fw-bolder">支付配置</h1>
+                            <h1 class="mb-3 fw-bolder">Thêm phương thức thanh toán</h1>
                         </div>
                         <div class="d-flex flex-column mb-8">
-                            <label class="form-label fw-bold" for="payment_name">显示名称</label>
-                            <input class="form-control mb-5" id="payment_name" value="" type="text" placeholder="用于前端显示" />
-                            <label class="form-label fw-bold" for="payment_icon">图标URL(选填)</label>
-                            <input class="form-control mb-5" id="payment_icon" value="" type="text" placeholder="用于前端显示使用(https://xxxx.com/icon.svg)" />
-                            <label class="form-label fw-bold" for="payment_notify_domain">自定义通知域名(选填)</label>
-                            <input class="form-control mb-5" id="payment_notify_domain" value="" type="text" placeholder="网关通知将发送到此域名(https://xxxx.com)" />
+                            <label class="form-label fw-bold" for="payment_name">Tên hiển thị</label>
+                            <input class="form-control mb-5" id="payment_name" value="" type="text" placeholder="Tên phương thức thanh toán" />
+                            <label class="form-label fw-bold" for="payment_icon">URL biểu tượng (tùy chỉnh)</label>
+                            <input class="form-control mb-5" id="payment_icon" value="" type="text" placeholder="Biểu tượng hiển thị (https://link.com/icon.svg)" />
+                            <label class="form-label fw-bold" for="payment_notify_domain">Tên miền thông báo (tùy chỉnh)</label>
+                            <input class="form-control mb-5" id="payment_notify_domain" value="" type="text" placeholder="Tên miền nhận thông báo (https://link.com)" />
                             <div class="row mb-5">
                                 <div class="col-sm-4">
-                                    <label class="form-label fw-bold" for="payment_percent_fee">百分比手续费(选填)</label>
+                                    <label class="form-label fw-bold" for="payment_percent_fee">Phần trăm phí xử lý (tùy chỉnh)</label>
                                     <div class="input-group">
-                                        <input class="form-control" id="payment_percent_fee" value="" type="text" placeholder="在订单金额的基础上附加手续费" />
+                                        <input class="form-control" id="payment_percent_fee" value="" type="text" placeholder="Phí VAT được cộng thêm vào tiền đơn hàng" />
                                         <span class="input-group-text">%</span>
                                     </div>
                                 </div>
                                 <div class="col-sm-4">
-                                    <label class="form-label fw-bold" for="payment_fixed_fee">固定手续费(选填)</label>
-                                    <input class="form-control" id="payment_fixed_fee" value="" type="text" placeholder="在订单金额的基础上附加手续费" />
+                                    <label class="form-label fw-bold" for="payment_fixed_fee">Phí xử lý cố định (tùy chỉnh)</label>
+                                    <input class="form-control" id="payment_fixed_fee" value="" type="text" placeholder="Phí VAT cố định được cộng thêm vào tiền đơn hàng" />
                                 </div>
                                 <div class="col-sm-4">
-                                    <label class="form-label fw-bold" for="payment_recharge_bonus">充值返利(选填，仅充值)</label>
+                                    <label class="form-label fw-bold" for="payment_recharge_bonus">Chiết khấu khi nạp tiền</label>
                                     <div class="input-group">
-                                        <input class="form-control" id="payment_recharge_bonus" value="" type="number" placeholder="在订单金额的基础返利" />
+                                        <input class="form-control" id="payment_recharge_bonus" value="" type="number" placeholder="Giảm giá dựa trên số tiền nạp" />
                                         <span class="input-group-text">%</span>
                                     </div>
                                 </div>
                             </div>
-                            <label class="form-label fw-bold" for="payment_gateway">接口文件</label>
+                            <label class="form-label fw-bold" for="payment_gateway">Hình thức thanh toán</label>
                             <select class="form-select mb-5" id="payment_gateway" value="" data-control="select2" data-hide-search="true">
+                                <option value="Momo">MOMO</option>>
+                                <option value="Banking">Banking</option>>
                                 <option value="Epay">Epay</option>>
                                 <option value="Mgate">Mgate</option>
                                 <option value="AlipayF2F">AlipayF2F</option>
@@ -106,6 +108,14 @@
                                 <option value="PayPal">PayPal</option>
                                 <option value="VmqPay">VmqPay</option>
                             </select>
+                            <div id="payment_config_momo" class="">
+                                <label class="form-label fw-bold" for="momo_url">URL Thanh toán</label>
+                                <input class="form-control mb-5" id="momo_url" value="" type="text" placeholder="" />
+                                <label class="form-label fw-bold" for="momo_sdt">Số tài khoản</label>
+                                <input class="form-control mb-5" id="momo_sdt" value="" type="text" placeholder="" />
+                                <label class="form-label fw-bold" for="momo_admin">Chủ tài khoản</label>
+                                <input class="form-control mb-5" id="momo_admin" value="" type="text" placeholder="" />
+                            </div>
                             <div id="payment_config_epay" class="">
                                 <label class="form-label fw-bold" for="epay_url">URL</label>
                                 <input class="form-control mb-5" id="epay_url" value="" type="text" placeholder="" />
@@ -155,18 +165,18 @@
                                 <input class="form-control mb-5" id="vmqpay_url" type="text" value="" placeholder="" />
                                 <label class="form-label fw-bold" for="vmqpay_key">VmqPay Key</label>
                                 <input class="form-control mb-5" id="vmqpay_key" value="" type="text" placeholder="" />
-                                <label class="form-label fw-bold" for="vmqpay_type">支付方式</label>
+                                <label class="form-label fw-bold" for="vmqpay_type">Phương thức thanh toán</label>
                                 <select class="form-select" id="vmqpay_type" value="">
-                                    <option value=1>微信</option>
-                                    <option value=2>支付宝</option>
+                                    <option value=1>WeChat</option>
+                                    <option value=2>Alipay</option>
                                 </select>
                             </div>
                         </div>
                         <div class="d-flex flex-center flex-row-fluid pt-12">
                             <button type="reset" class="btn btn-light me-3" data-bs-dismiss="modal">Hủy</button>
                             <button type="submit" class="btn btn-primary" data-kt-admin-create-payment-action="submit" onclick="zeroAdminPayment('create')">
-                                <span class="indicator-label">submit</span>
-                                <span class="indicator-progress">please wait
+                                <span class="indicator-label">Thêm phương thức</span>
+                                <span class="indicator-progress">Vui lòng chờ
                                 <span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
                             </button>
                         </div>
@@ -200,6 +210,13 @@
                         'epay_url': $('#epay_url').val(),
                         'epay_pid': $('#epay_pid').val(),
                         'epay_key': $('#epay_key').val(),
+                        };
+                    },
+                    'Momo': function() {
+                        return {
+                        'momo_url': $('#momo_url').val(),
+                        'momo_sdt': $('#momo_sdt').val(),
+                        'momo_admin': $('#momo_admin').val(),
                         };
                     },
                     'Mgate': function() {
@@ -313,6 +330,11 @@
                                 'pid': 'epay_pid',
                                 'key': 'epay_key',
                             },
+                            'momo': {
+                                'url': 'momo_url',
+                                'pid': 'momo_sdt',
+                                'key': 'momo_admin',
+                            },
                             'mgate': {
                                 'url': 'mgate_url',
                                 'id': 'mgate_id',
@@ -389,6 +411,9 @@
                     '#payment_percent_fee',
                     '#payment_fixed_fee',
                     '#payment_recharge_bonus',
+                    '#momo_url',
+                    '#momo_sdt',
+                    '#momo_admin',
                     '#epay_url',
                     '#epay_pid',
                     '#epay_key',

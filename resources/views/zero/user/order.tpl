@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
     <head>
-	<title>{$config["website_name"]} Order</title>
+	<title>{$config["website_name"]} Lịch sử đặt hàng</title>
         
         <meta charset="UTF-8" />
         <meta name="renderer" content="webkit" />
@@ -31,7 +31,7 @@
                                         <div class="card-header align-items-center py-5 gap-2 gap-md-5">
                                             <div class="card-title">
                                                 <div class="fs-3 fw-bolder text-dark">
-                                                    order record
+                                                    Lịch sử đặt hàng
                                                 </div>
                                             </div>
                                         </div>
@@ -39,11 +39,11 @@
                                             <table class="table align-middle table-striped table-row-bordered text-nowrap gy-5 gs-7" id="zero_order_table" style="width:100%">
                                                 <thead>
                                                     <tr class="text-start text-gray-400 fw-bold fs-7 text-uppercase gs-0">                                                       
-                                                        <th>amount</th>
-                                                        <th>status</th>
-														<th>type</th>
-                                                        <th>date</th>
-														<th>action</th>
+                                                        <th>{$trans->t('Số tiền')}</th>
+                                                        <th>{$trans->t('Tình trạng')}</th>
+														<th>{$trans->t('Kiểu')}</th>
+                                                        <th>{$trans->t('Ngày')}</th>
+														<th>{$trans->t('Hoạt động')}</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody class="text-gray-600 fw-semibold"></tbody>
@@ -56,7 +56,7 @@
                         <div class="app_footer py-4 d-flex flex-lg-column" id="kt_app_footer">
                             <div class="app-container container-fluid d-flex flex-column flex-md-row flex-center flex-md-stack py-3">
                                 <div class="text-dark-75 order-2 order-md-1">
-                                    &copy;<script>document.write(new Date().getFullYear());</script>,&nbsp;<a>Bản quyền thuộc về&nbsp;{$config["website_name"]}</a>
+                                    &copy;<script>document.write(new Date().getFullYear());</script>,&nbsp;<a>{$config["website_name"]},&nbsp;Inc.&nbsp;All rights reserved.</a>
                                 </div>
                             </div>
                         </div>

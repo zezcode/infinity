@@ -67,7 +67,7 @@
                                                         </svg>
                                                     </span>
                                                 </span>
-                                                <span class="menu-title">Light</span>
+                                                <span class="menu-title">Sáng</span>
                                             </a>
                                         </div>
                                         <div class="menu-item px-3 my-0">
@@ -82,7 +82,7 @@
                                                         </svg>
                                                     </span>
                                                 </span>
-                                                <span class="menu-title">Dark</span>
+                                                <span class="menu-title">Tối</span>
                                             </a>
                                         </div>
                                         <div class="menu-item px-3 my-0">
@@ -94,7 +94,7 @@
                                                         </svg>
                                                     </span>
                                                 </span>
-                                                <span class="menu-title">System</span>
+                                                <span class="menu-title">Theo hệ thống</span>
                                             </a>
                                         </div>
                                     </div>
@@ -106,7 +106,7 @@
                                         <span class="position-absolute top-0 start-100 translate-middle  badge badge-circle badge-danger w-15px h-15px ms-n4 mt-3">{count($anns)}</span>                              
                                     </div>
                                 </div>
-                                -->
+                                <!--
                                 <div class="app-navbar-item ms-1 ms-lg-3">
                                     <a type="button" class="btn btn-icon btn-active-light-primary w-35px h-35px w-md-40px h-md-40px" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">                                
                                         <i class="bi bi-translate fs-2"></i>
@@ -116,18 +116,18 @@
                                             <a href="#" class="menu-link px-3 py-2 btn btn-active-light-primary" onclick="changeCurrentLanguage('en-US')">
                                                 <span class="symbol symbol-20px me-4">
                                                     <img class="rounded-1" src="/theme/infinity/media/flags/united-states.svg" alt="" />
-                                                </span>english
+                                                </span>Tiếng Việt
                                             </a>
                                         </div>	
                                         <div class="menu-item px-3 my-0">
                                             <a href="#" class="menu-link px-3 py-2 btn btn-active-light-primary" onclick="changeCurrentLanguage('zh-CN')">
                                                 <span class="symbol symbol-20px me-4">
                                                     <img class="rounded-1" src="/theme/infinity/media/flags/china.svg" alt="" />
-                                                </span>chinese
+                                                </span>Tiếng Anh
                                             </a>
                                         </div>										
                                     </div>
-                                </div>
+                                </div> -->
                                 <div class="app-navbar-item ms-1 ms-lg-3" id="kt_header_user_menu_toggle">
                                     <div class="cursor-pointer symbol symbol-30px symbol-md-40px" data-kt-menu-trigger="click" data-kt-menu-attach="parent" data-kt-menu-placement="bottom-end">
                                         <img src="{$user->gravatar}" alt="" />
@@ -139,14 +139,14 @@
                                                     <img alt="gravatar" src="{$user->gravatar}" />
                                                 </div>
                                                 <div class="d-flex flex-column">
-                                                    <a class="badge badge-light-success fw-bold fs-8">权限组:&nbsp; {$user->getPermission($user->class)}</a>
+                                                    <a class="badge badge-light-success fw-bold fs-8">Cấp độ:&nbsp; {$user->getPermission($user->class)}</a>
                                                     <a class="fw-semibold text-muted text-hover-primary fs-7">{$user->email}</a>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="separator my-2"></div>
                                         <div class="menu-item px-5">
-                                            <a href="/user/logout" class="menu-link px-5 fw-bold">signout</a>
+                                            <a href="/user/logout" class="menu-link px-5 fw-bold">Đăng xuất</a>
                                         </div>
                                     </div>
                                 </div>
@@ -184,7 +184,7 @@
                                                     </svg>
                                                 </span>
                                             </span>
-                                            <span class="menu-title">dashboard</span>
+                                            <span class="menu-title">Trang chủ</span>
                                         </a>
                                     </div>
                                     <div class="menu-item menu-accordion">
@@ -196,7 +196,7 @@
                                                     </svg>
                                                 </span>
                                             </span>
-                                            <span class="menu-title">order</span>
+                                            <span class="menu-title">Đơn hàng</span>
                                         </a>
                                     </div>
                                     <div class="menu-item menu-accordion">
@@ -211,7 +211,7 @@
                                                     </svg>
                                                 </span>
                                             </span>
-                                            <span class="menu-title">products</span>
+                                            <span class="menu-title">Mua gói dịch vụ</span>
                                         </a>
                                     </div>
                                     <div class="menu-item menu-accordion">
@@ -223,7 +223,7 @@
                                                     </svg>
                                                 </span>
                                             </span>
-                                            <span class="menu-title">node</span>
+                                            <span class="menu-title">Hệ thống máy chủ</span>
                                         </a>
                                     </div>
                                     <div class="menu-item menu-accordion">
@@ -237,7 +237,7 @@
                                                     </svg>
                                                 </span>
                                             </span>
-                                            <span class="menu-title">ticket</span>
+                                            <span class="menu-title">Phiếu hỗ trợ</span>
                                         </a>
                                     </div>
                                     <div class="menu-item menu-accordion">
@@ -251,7 +251,7 @@
                                                     </svg>
                                                 </span>
                                             </span>
-                                            <span class="menu-title">profile</span>
+                                            <span class="menu-title">Thông tin người dùng</span>
                                         </a>
                                     </div>
                                     
@@ -265,7 +265,7 @@
                                                     </svg>
                                                 </span>
                                             </span>
-                                            <span class="menu-title">record</span>
+                                            <span class="menu-title">Nhật kí sử dụng</span>
                                         </a>
                                     </div>
                                     <div class="menu-item menu-accordion">
@@ -279,7 +279,7 @@
                                                     </svg>
                                                 </span>
                                             </span>
-                                            <span class="menu-title">ban</span>
+                                            <span class="menu-title">Lệnh cấm</span>
                                         </a>
                                     </div>
                                     <div class="menu-item menu-accordion">
@@ -294,7 +294,7 @@
                                                     </svg>
                                                 </span>
                                             </span>
-                                            <span class="menu-title">referral</span>
+                                            <span class="menu-title">Chương trình CTV</span>
                                         </a>
                                     </div>
                                     {if $user->is_admin == '1'}
@@ -306,7 +306,7 @@
                                                         <path d="M6.5 0A1.5 1.5 0 0 0 5 1.5v3a.5.5 0 0 1-.5.5h-3A1.5 1.5 0 0 0 0 6.5v3A1.5 1.5 0 0 0 1.5 11h3a.5.5 0 0 1 .5.5v3A1.5 1.5 0 0 0 6.5 16h3a1.5 1.5 0 0 0 1.5-1.5v-3a.5.5 0 0 1 .5-.5h3A1.5 1.5 0 0 0 16 9.5v-3A1.5 1.5 0 0 0 14.5 5h-3a.5.5 0 0 1-.5-.5v-3A1.5 1.5 0 0 0 9.5 0h-3ZM6 1.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5v3A1.5 1.5 0 0 0 11.5 6h3a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-.5.5h-3a1.5 1.5 0 0 0-1.5 1.5v3a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-3A1.5 1.5 0 0 0 4.5 10h-3a.5.5 0 0 1-.5-.5v-3a.5.5 0 0 1 .5-.5h3A1.5 1.5 0 0 0 6 4.5v-3Z"/>
                                                     </svg>
                                             </span>
-                                            <span class="menu-title">admin</span>
+                                            <span class="menu-title">Trang ADMIN</span>
                                         </a>
                                     </div>
                                     {/if}
@@ -314,8 +314,8 @@
                             </div>
                         </div>
                         <div class="app-sidebar-footer flex-column-auto pt-2 pb-6 px-6" id="kt_app_sidebar_footer">
-                            <a href="{$config['telegram_group_url']}" target="_blank" class="btn btn-flex flex-center btn-custom btn-primary overflow-hidden text-nowrap px-0 h-40px w-100" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss-="click" title="点击加入我们的群组">
-                                <span class="btn-label fw-bold">Join Telegram Group</span>
+                            <a href="{$config['telegram_group_url']}" target="_blank" class="btn btn-flex flex-center btn-custom btn-primary overflow-hidden text-nowrap px-0 h-40px w-100" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss-="click" title="Tham gia nhóm zalo">
+                                <span class="btn-label fw-bold">Nhóm zalo hỗ trợ</span>
                                 <span class="svg-icon btn-icon svg-icon-2 m-0">
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path opacity="0.3" d="M19 22H5C4.4 22 4 21.6 4 21V3C4 2.4 4.4 2 5 2H14L20 8V21C20 21.6 19.6 22 19 22ZM12.5 18C12.5 17.4 12.6 17.5 12 17.5H8.5C7.9 17.5 8 17.4 8 18C8 18.6 7.9 18.5 8.5 18.5L12 18C12.6 18 12.5 18.6 12.5 18ZM16.5 13C16.5 12.4 16.6 12.5 16 12.5H8.5C7.9 12.5 8 12.4 8 13C8 13.6 7.9 13.5 8.5 13.5H15.5C16.1 13.5 16.5 13.6 16.5 13ZM12.5 8C12.5 7.4 12.6 7.5 12 7.5H8C7.4 7.5 7.5 7.4 7.5 8C7.5 8.6 7.4 8.5 8 8.5H12C12.6 8.5 12.5 8.6 12.5 8Z" fill="currentColor" />

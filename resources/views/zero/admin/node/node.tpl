@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="vi">
     <head>
-        <title>{$config["website_name"]} 节点</title>
+        <title>{$config["website_name"]} Quản lý máy chủ</title>
         <meta charset="UTF-8" />
         <meta name="renderer" content="webkit" />
         <meta name="description" content="Updates and statistics" />

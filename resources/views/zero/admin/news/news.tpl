@@ -70,7 +70,7 @@
                         </div>
                         <div class="d-flex flex-column mb-8">
                             <label class="fs-6 fw-semibold mb-2" for="zero_admin_news_create_editor">
-                                <span class="required">details</span>
+                                <span class="required">Chi tiết</span>
                             </label>
                             <div id="zero_admin_news_create_editor" class="h-250px scroll"></div>
                         </div>
@@ -108,7 +108,7 @@
                         </div>
                         <div class="d-flex flex-column mb-8">
                             <label class="fs-6 fw-semibold mb-2" for="zero_admin_news_update_editor">
-                                <span class="required">details</span>
+                                <span class="required">Chi tiết</span>
                             </label>
                             <div id="zero_admin_news_update_editor" class="h-250px scroll"></div>
                         </div>
