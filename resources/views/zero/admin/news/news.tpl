@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="vi">
     <head>
-        <title>{$config["website_name"]} 公告</title>
+        <title>{$config["website_name"]} Quản lý thông báo</title>
         
         <meta charset="UTF-8" />
         <meta name="renderer" content="webkit" />
@@ -30,10 +30,10 @@
 
                                     <div class="card">
                                         <div class="card-header">
-                                            <div class="card-title text-dark fs-3 fw-bolder">公告列表</div>
+                                            <div class="card-title text-dark fs-3 fw-bolder">Quản lý thông báo</div>
                                             <div class="card-toolbar">
 												<button class="btn btn-primary fw-bold btn-sm" type="button" data-bs-toggle="modal" data-bs-target="#zero_modal_create_news">
-                                                <i class="bi bi-cloud-plus fs-3"></i>创建公告
+                                                <i class="bi bi-cloud-plus fs-3"></i>Thêm thông báo
                                                 </button>
 											</div>
                                         </div>
@@ -66,19 +66,19 @@
                     </div>
                     <div class="modal-body scroll-y pt-0 pb-15 px-5 px-xl-20">
                         <div class="mb-13 text-center">
-                            <h1 class="mb-3">创建公告</h1>
+                            <h1 class="mb-3">Thêm thông báo</h1>
                         </div>
                         <div class="d-flex flex-column mb-8">
                             <label class="fs-6 fw-semibold mb-2" for="zero_admin_news_create_editor">
-                                <span class="required">Chi tiết</span>
+                                <span class="required">Nội dung thông báo</span>
                             </label>
                             <div id="zero_admin_news_create_editor" class="h-250px scroll"></div>
                         </div>
                         <div class="d-flex flex-center flex-row-fluid pt-12">
                             <button type="reset" class="btn btn-light me-3" data-bs-dismiss="modal">Hủy</button>
                             <button type="submit" class="btn btn-primary" data-kt-admin-create-news-action="submit" onclick="zeroAdminCreateNews()">
-                                <span class="indicator-label">submit</span>
-                                <span class="indicator-progress">please wait
+                                <span class="indicator-label">Thêm thông báo</span>
+                                <span class="indicator-progress">Vui lòng chờ
                                 <span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
                             </button>
                         </div>
@@ -104,19 +104,19 @@
                     </div>
                     <div class="modal-body scroll-y pt-0 pb-15 px-5 px-xl-20">
                         <div class="mb-13 text-center">
-                            <h1 class="mb-3">更新公告</h1>
+                            <h1 class="mb-3">Cập nhật thông báo</h1>
                         </div>
                         <div class="d-flex flex-column mb-8">
                             <label class="fs-6 fw-semibold mb-2" for="zero_admin_news_update_editor">
-                                <span class="required">Chi tiết</span>
+                                <span class="required">Nội dung thông báo</span>
                             </label>
                             <div id="zero_admin_news_update_editor" class="h-250px scroll"></div>
                         </div>
                         <div class="d-flex flex-center flex-row-fluid pt-12">
                             <button type="reset" class="btn btn-light me-3" data-bs-dismiss="modal">Hủy</button>
                             <button type="submit" class="btn btn-primary" data-kt-admin-update-news-action="submit" onclick="zeroAdminUpdateNews()">
-                                <span class="indicator-label">submit</span>
-                                <span class="indicator-progress">please wait
+                                <span class="indicator-label">Lưu thay đổi</span>
+                                <span class="indicator-progress">Vui lòng chờ
                                 <span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
                             </button>
                         </div>

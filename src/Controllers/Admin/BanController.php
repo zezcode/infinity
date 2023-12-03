@@ -16,27 +16,27 @@ class BanController extends AdminController
         $table_config['total_column'] = [
             
             'id'     => 'ID',
-            'name'   => '名称',
-            'text'   => '介绍',
-            'regex'  => '正则表达式',
-            'type'   => '类型',
+            'name'   => 'Tên',
+            'text'   => 'Nội dung',
+            'regex'  => 'Biểu hiện',
+            'type'   => 'Loại',
             'action' => 'Thao tác',
         ];
         $table_config_ban_record['total_column'] = [
             'id'                => 'ID',
-            'user_id'           => '用户ID',
-            'detect_number'     => '违规次数',
-            'ban_time'          => '封禁时长(分钟)',
-            'end_time'          => '封禁开始时间',
-            'ban_end_time'      => '封禁结束时间',
-            'all_detect_number' => '累计违规次数'
+            'user_id'           => 'USER ID',
+            'detect_number'     => 'Số lần vi phạm',
+            'ban_time'          => 'Thời gian cấm (Phút)',
+            'end_time'          => 'Thời gian bắt đầu',
+            'ban_end_time'      => 'Thời gian kết thúc',
+            'all_detect_number' => 'TTổng số lần cấm'
         ];
         $table_config_detect_record['total_column'] = [
             'id'       => 'ID',
-            'user_id'  => '用户ID',
-            'node_id'  => '节点ID',
-            'list_id'  => '规则ID',
-            'created_at' => '时间'
+            'user_id'  => 'USER ID',
+            'node_id'  => 'ID Máy chủ',
+            'list_id'  => 'ID Quy tắc',
+            'created_at' => 'Thời gian'
         ];
         $table_config_detect_record['ajax_url'] = 'ban/detect/record/ajax';
         $table_config_ban_record['ajax_url']    = 'ban/record/ajax';
@@ -98,13 +98,13 @@ class BanController extends AdminController
         if (!$rule->save()) {
             return $response->withJson([
                 'ret' => 0,
-                'msg' => '添加失败'
+                'msg' => 'Thêm thất bại'
             ]);
         }
 
         return $response->withJson([
             'ret' => 1,
-            'msg' => '添加成功'
+            'msg' => 'Thêm thành công'
         ]);
     }
 
@@ -122,7 +122,7 @@ class BanController extends AdminController
         if (!$rule->save()) {
             return $response->withJson([
                 'ret' => 0,
-                'msg' => '修改失败'
+                'msg' => 'Sửa đổi thất bại'
             ]);
         }
 

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="vi">
     <head>
-        <title>{$config["website_name"]} 优惠码</title>
+        <title>{$config["website_name"]} Quản lý mã giảm giá</title>
         
         <meta charset="UTF-8" />
         <meta name="renderer" content="webkit" />
@@ -29,10 +29,10 @@
                                 <div id="kt_app_content_container" class="app-container container-xxl">
                                     <div class="card">
                                         <div class="card-header">
-                                            <div class="card-title text-dark fs-3 fw-bolder">优惠码记录</div>
+                                            <div class="card-title text-dark fs-3 fw-bolder">Quản lý mã giảm giá</div>
                                             <div class="card-toolbar">
                                                 <button class="btn btn-primary btn-sm" type="button" data-bs-toggle="modal" data-bs-target="#zero_modal_create_coupon">
-                                                <i class="bi bi-cloud-plus fs-3"></i>创建优惠码
+                                                <i class="bi bi-cloud-plus fs-3"></i>Tạo mã giảm giá
                                                 </button>
                                             </div>
                                         </div>
@@ -65,37 +65,37 @@
                     </div>
                     <div class="modal-body scroll-y pt-0 pb-15 px-5 px-xl-20">
                         <div class="mb-13 text-center">
-                            <h1 class="mb-3">创建优惠码</h1>
+                            <h1 class="mb-3">Tạo mã giảm giá</h1>
                         </div>
                         <div class="d-flex flex-column mb-8">
                             <label class="d-flex align-items-center fs-6 fw-semibold mb-2" for="zero_create_coupon_code">
-                                <span class="required">优惠码</span>
+                                <span class="required">Mã giảm giá</span>
                             </label>
-                            <input type="text" value="" class="form-control form-control-solid" placeholder="优惠码" id="zero_create_coupon_code">
+                            <input type="text" value="" class="form-control form-control-solid" placeholder="Nhập mã giảm giá" id="zero_create_coupon_code">
                         </div>
                         <div class="d-flex flex-column mb-8">
                             <label class="d-flex align-items-center fs-6 fw-semibold mb-2" for="zero_create_coupon_dicount_rate">
-                                <span class="required">折扣比例</span>
+                                <span class="required">Phần trăm giảm giá</span>
                             </label>
                             <div class="input-group input-group-solid">
-                                <input type="text" value="" class="form-control form-control-solid" placeholder="折扣比例" id="zero_create_coupon_dicount_rate">
+                                <input type="text" value="" class="form-control form-control-solid" placeholder="Phần trăm giảm giá" id="zero_create_coupon_dicount_rate">
                                 <span class="input-group-text">%</span>
                             </div>
                         </div>
                         <div class="d-flex flex-column mb-8">
                             <label class="fs-6 fw-semibold mb-2" for="zero_create_coupon_valid_time">
-                                <span class="required">有效时间</span>
+                                <span class="required">Thời gian hiệu lực</span>
                             </label>
                             <div class="input-group input-group-solid">
-                                <input type="text" value="1" class="form-control form-control-solid" placeholder="有效时间" id="zero_create_coupon_valid_time">
-                                <span class="input-group-text">小时</span>
+                                <input type="text" value="1" class="form-control form-control-solid" placeholder="Thời gian hiệu lực" id="zero_create_coupon_valid_time">
+                                <span class="input-group-text">Giờ</span>
                             </div>
                         </div>
                         <div class="d-flex flex-column mb-8">
                             <label class="fs-6 fw-semibold mb-2" for="zero_create_coupon_limit_product">
-                                <span class="required">指定商品</span>
+                                <span class="required">Áp dụng cho gói</span>
                             </label>
-                            <select class="form-select form-select-solid" id="zero_create_coupon_limit_product" data-control="select2" data-allow-clear="true" data-placeholder="限制指定产品使用优惠" multiple="multiple">
+                            <select class="form-select form-select-solid" id="zero_create_coupon_limit_product" data-control="select2" data-allow-clear="true" data-placeholder="Chỉ dùng mã cho các gói được chỉ định" multiple="multiple">
                                 <option></option>
                                 {foreach $products as $product}
                                     <option value={$product->id}>{$product->name}</option>
@@ -104,50 +104,50 @@
                         </div>
                         <div class="d-flex flex-column mb-8">
                             <label class="fs-6 fw-semibold mb-2" for="zero_create_coupon_limit_product_period">
-                                <span class="required">指定周期</span>
+                                <span class="required">Khoảng thời gian giữa các lần dùng</span>
                             </label>
-                            <select class="form-select form-select-solid" id="zero_create_coupon_limit_product_period" data-control="select2" data-allow-clear="true" data-placeholder="限制指定周期使用优惠" multiple="multiple">
+                            <select class="form-select form-select-solid" id="zero_create_coupon_limit_product_period" data-control="select2" data-allow-clear="true" data-placeholder="Khoảng thời gian giữa các lần dùng" multiple="multiple">
                                 <option></option>                              
-                                <option value="30">一个月</option>
-                                <option value="90">三个月</option>
-                                <option value="180">半年</option>
-                                <option value="360">一年</option>
-                                <option value="720">两年</option>
+                                <option value="30">1 Tháng</option>
+                                <option value="90">3 Tháng</option>
+                                <option value="180">6 Tháng</option>
+                                <option value="360">1 Năm</option>
+                                <option value="720">2 Năm</option>
                             </select>
                         </div>
                         <div class="d-flex flex-column mb-8">
                             <label class="fs-6 fw-semibold mb-2" for="zero_create_coupon_per_times">
-                                <span class="required">用户使用次数</span>
+                                <span class="required">Số lần 1 tài khoản có thể dùng</span>
                             </label>
                             <div class="input-group input-group-solid">
-                                <input type="text" value="" class="form-control form-control-solid" placeholder="默认为无限制" id="zero_create_coupon_per_times">
-                                <span class="input-group-text">次</span>
+                                <input type="text" value="" class="form-control form-control-solid" placeholder="Mặc định là không giới hạn" id="zero_create_coupon_per_times">
+                                <span class="input-group-text">Lần</span>
                             </div>
                         </div>
                         <div class="d-flex flex-column mb-8">
                             <label class="fs-6 fw-semibold mb-2" for="zero_create_coupon_total_times">
-                                <span class="required">总使用次数</span>
+                                <span class="required">Số lượng mã giảm giá</span>
                             </label>
                             <div class="input-group input-group-solid">
-                                <input type="text" value="" class="form-control form-control-solid" placeholder="默认为无限制" id="zero_create_coupon_total_times">
-                                <span class="input-group-text">次</span>
+                                <input type="text" value="" class="form-control form-control-solid" placeholder="Số lần sử dụng mã giảm giá" id="zero_create_coupon_total_times">
+                                <span class="input-group-text">Lần</span>
                             </div>
                         </div>
                         <div class="d-flex flex-column mb-8">
                             <label class="fs-6 fw-semibold mb-2" for="zero_create_coupon_generation_method">
-                                <span class="required">生成方式</span>
+                                <span class="required">Phương pháp tạo</span>
                             </label>
                             <select class="form-select form-select-solid" data-control="select2" data-hide-search="true" id="zero_create_coupon_generation_method">
-                                <option value="1">指定字符</option>
-                                <option value="2">随机字符</option>
-                                <option value="3">指定字符+随机字符</option>
+                                <option value="1">Ký tự được chỉ định</option>
+                                <option value="2">Ký tự ngẫu nhiên</option>
+                                <option value="3">Cả 2 phương pháp</option>
                             </select>
                         </div>
                         <div class="d-flex flex-center flex-row-fluid pt-12">
                             <button type="reset" class="btn btn-light me-3" data-bs-dismiss="modal">Hủy</button>
                             <button type="submit" class="btn btn-primary" data-kt-admin-action="submit" onclick="zeroAdminCreateCoupon()">
-                                <span class="indicator-label">submit</span>
-                                <span class="indicator-progress">please wait
+                                <span class="indicator-label">Tạo mã</span>
+                                <span class="indicator-progress">Vui lòng chờ
                                 <span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
                             </button>
                         </div>

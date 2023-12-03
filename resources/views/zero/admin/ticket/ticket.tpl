@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="vi">
     <head>
-        <title>{$config["website_name"]} 工单</title>
+        <title>{$config["website_name"]} Quản lý hỗ trợ</title>
         
         <meta charset="UTF-8" />
         <meta name="renderer" content="webkit" />
@@ -30,10 +30,10 @@
 
                                     <div class="card">
                                         <div class="card-header">
-                                            <div class="card-title text-dark fs-3 fw-bolder">工单列表</div>
+                                            <div class="card-title text-dark fs-3 fw-bolder">Quản lý phiếu hỗ trợ</div>
                                             <div class="card-toolbar">
 												<button class="btn btn-primary fw-bold btn-sm" type="button" data-bs-toggle="modal" data-bs-target="#zero_modal_create_ticket">
-                                                <i class="bi bi-cloud-plus fs-3"></i>创建工单
+                                                <i class="bi bi-cloud-plus fs-3"></i>Tạo phiếu hỗ trợ
                                                 </button>
 											</div>
                                         </div>
@@ -67,12 +67,12 @@
                     </div>
                     <div class="modal-body scroll-y pt-0 pb-15 px-5 px-xl-20">
                         <div class="mb-13 text-center">
-                            <h1 class="mb-3">创建工单</h1>
+                            <h1 class="mb-3">Tạo phiếu hỗ trợ</h1>
                         </div>
                         <form class="rounded border mt-10">
 							<div class="d-block">
                                 <div class="border-bottom">
-                                    <select class="form-select" id="zero_admin_create_ticket_userid" data-control="select2" data-placeholder="选择一个用户">
+                                    <select class="form-select" id="zero_admin_create_ticket_userid" data-control="select2" data-placeholder="Chọn một người dùng">
                                         <option></option>
                                         {foreach $allUsers as $allUser}
                                             <option value={$allUser->id}>{$allUser->email}</option>
@@ -80,24 +80,24 @@
                                     </select>
                                 </div>
 								<div class="border-bottom">
-									<select id="zero_admin_create_ticket_type" class="form-select" data-control="select2" data-hide-search="true" data-placeholder="工单类型">
+									<select id="zero_admin_create_ticket_type" class="form-select" data-control="select2" data-hide-search="true" data-placeholder="Loại phiếu hỗ trợ">
 										<option></option>
-										<option value="support">支持</option>
-										<option value="account">账户</option>
-										<option value="billing">账单</option>
-										<option value="sales">销售</option>
+										<option value="support">Hỗ trợ chung</option>
+										<option value="account">Tài khoản</option>
+										<option value="billing">Thanh toán</option>
+										<option value="sales">Mua hàng</option>
 									</select>
 								</div>															
 								<div class="border-bottom">
-									<input class="form-control border-0 px-8 min-h-45px" id="zero_admin_create_ticket_subject" placeholder="subject" />
+									<input class="form-control border-0 px-8 min-h-45px" id="zero_admin_create_ticket_subject" placeholder="Tiêu đề" />
 								</div>
 								<div id="zero_admin_ticket_editor" class="border-0 h-250px px-3"></div>
 							</div>
 							<div class="d-flex flex-stack flex-wrap gap-2 py-5 ps-8 pe-5 border-top">
 								<div class="d-flex align-items-center me-3">
 									<button class="btn btn-primary fs-bold px-6" data-kt-users-action="submit" onclick="zeroAdminCreateTicket()">
-										<span class="indicator-label">submit</span>
-										<span class="indicator-progress">please wait
+										<span class="indicator-label">Tạo phiếu</span>
+										<span class="indicator-progress">Vui lòng chờ
 										<span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
 									</button>
 								</div>
@@ -132,7 +132,7 @@
                 const submitButton = document.querySelector('[data-kt-admin-action="submit"]');
                 submitButton.setAttribute('data-kt-indicator', 'on');
                 submitButton.disabled = true;
-                var text = quill.root.innerHTML;
+                var text = editorsCreate.getData();
                 setTimeout(function () {
                     $.ajax({
                         type: "POST",

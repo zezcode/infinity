@@ -18,12 +18,12 @@ class TicketController extends AdminController
     {
         $table_config['total_column'] = [
             'id'           => 'ID',
-            'userid'       => '用户ID',
-            'type'         => '类型',
-            'title'        => '主题',
-            'status'       => '状态',
-            'created_at'   => '创建时间',
-            'updated_at'   => '更新时间',
+            'userid'       => 'USER ID',
+            'type'         => 'Loại phiếu',
+            'title'        => 'Tiêu đề',
+            'status'       => 'Trạng thái',
+            'created_at'   => 'Thời gian tạo',
+            'updated_at'   => 'Thời gian cập nhật',
             'action'       => 'Thao tác',
         ];
         $table_config['ajax_url'] = 'ticket/ajax';
@@ -45,7 +45,7 @@ class TicketController extends AdminController
         if (empty($subject)||empty($comment)||empty($user_id)) {
             return $response->withJson([
                 'ret' => 0,
-                'msg' => '非法输入',
+                'msg' => 'Đã có lỗi xảy ra',
             ]);
         }
 
@@ -74,7 +74,7 @@ class TicketController extends AdminController
             [
                 'ret' => 1,
                 'id'  => $ticket->id,
-                'msg' => '创建成功'
+                'msg' => 'Tạo thành công'
             ]
         );
     }
@@ -87,7 +87,7 @@ class TicketController extends AdminController
         if ($comment === '') {
             return $response->withJson([
                 'ret' => 0,
-                'msg' => '非法输入',
+                'msg' => 'Đã có lỗi xảy ra',
             ]);
         }
 
@@ -107,10 +107,10 @@ class TicketController extends AdminController
 
         $user = User::find($ticket->userid);
         $user->sendMail(
-            Setting::obtain('website_name') . '-工单被回复',
+            Setting::obtain('website_name') . '-Phiếu đã được phản hồi',
             'news/warn.tpl',
             [
-                'text' => '您好，有人回复了<a href="' . Setting::obtain('website_url') . '/user/ticket/view/' . $ticket->id . '">工单</a>，请您查看。',
+                'text' => 'Xin chào, có người đã trả lời<a href="' . Setting::obtain('website_url') . '/user/ticket/view/' . $ticket->id . '">phiếu hỗ trợ</a>，hãy kiểm tra',
             ],
             []
         );
@@ -122,7 +122,7 @@ class TicketController extends AdminController
 
         return $response->withJson([
             'ret' => 1,
-            'msg' => '提交成功'
+            'msg' => 'Gửi thành công'
         ]);
     }
 
@@ -169,9 +169,9 @@ class TicketController extends AdminController
                 'action'       => <<<EOT
                                     <div class="btn-group dropstart"><a class="btn btn-light-primary btn-sm dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false">Thao tác</a>
                                         <ul    class = "dropdown-menu">
-                                        <li><a class = "dropdown-item" href = "ticket/view/{$rowData->id}">Chỉnh sửa</a></li>
+                                        <li><a class = "dropdown-item" href = "ticket/view/{$rowData->id}">Trả lời</a></li>
                                         <li><a class = "dropdown-item" type = "button" onclick = "zeroAdminDelete('ticket', {$rowData->id})">Xóa bỏ</a></li>
-                                        <li><a class = "dropdown-item" type = "button" onclick = "zeroAdminCloseTicket({$rowData->id})">关闭</a></li>
+                                        <li><a class = "dropdown-item" type = "button" onclick = "zeroAdminCloseTicket({$rowData->id})">Đóng</a></li>
                                         </ul>
                                     </div>
                                 EOT,

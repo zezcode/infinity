@@ -11,13 +11,13 @@ class Withdraw extends Model
     {
         switch ($this->status) {
             case 1:
-                $status = '<div class="badge font-weight-bold badge-light-success fs-6">已完成</div>';
+                $status = '<div class="badge font-weight-bold badge-light-success fs-6">Hoàn thành</div>';
                 break;
             case 0:
-                $status = '<div class="badge font-weight-bold badge-light-warning fs-6">处理中</div>';
+                $status = '<div class="badge font-weight-bold badge-light-warning fs-6">Đang chờ</div>';
                 break;
             case -1: 
-                $status = '<div class="badge font-weight-bold badge-light-danger fs-6">已退回</div>';
+                $status = '<div class="badge font-weight-bold badge-light-danger fs-6">Trả lại</div>';
                 break;
         }
         return $status;

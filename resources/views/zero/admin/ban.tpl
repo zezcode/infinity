@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="vi">
     <head>
-        <title>{$config["website_name"]} 封禁</title>
+        <title>{$config["website_name"]} Quản lý lệnh cấm</title>
         
         <meta charset="UTF-8" />
         <meta name="renderer" content="webkit" />
@@ -29,9 +29,9 @@
                                 <div id="kt_app_content_container" class="app-container container-xxl">
                                     <div class="card mb-9">
                                         <div class="card-header">
-                                            <div class="card-title text-dark fs-3 fw-bolder">封禁规则</div>
+                                            <div class="card-title text-dark fs-3 fw-bolder">Quản lý lệnh cấm</div>
                                             <div class="card-toolbar">
-                                                <button class="btn btn-primary btn-sm" type="button" data-bs-toggle="modal" data-bs-target="#zero_modal_create_ban_rule">创建规则</button>
+                                                <button class="btn btn-primary btn-sm" type="button" data-bs-toggle="modal" data-bs-target="#zero_modal_create_ban_rule">Thêm quy tắc</button>
                                             </div>
                                         </div>
                                         <div class="card-body">
@@ -40,19 +40,19 @@
                                     </div>
                                     <div class="card mb-9">
                                         <div class="card-header">
-                                            <div class="card-title text-dark fs-3 fw-bolder">封禁记录</div>
+                                            <div class="card-title text-dark fs-3 fw-bolder">Lịch sử cấm</div>
                                         </div>
                                         <div class="card-body">
                                             <table class="table align-middle table-striped table-row-bordered text-nowrap gy-5 gs-7" id="zero_admin_ban_record">
                                                 <thead>
                                                     <tr class="text-start text-gray-400 fw-bold fs-7 text-uppercase gs-0">  
                                                         <th>ID</th>
-                                                        <th>用户ID</th>
-                                                        <th>触发次数</th>
-                                                        <th>封禁时长</th>
-                                                        <th>开始时间</th>
-                                                        <th>结束时间</th>
-                                                        <th>累积次数</th>
+                                                        <th>USER ID</th>
+                                                        <th>Số lần vi phạm</th>
+                                                        <th>Thời gian cấm (phút)</th>
+                                                        <th>Thời gian bắt đầu</th>
+                                                        <th>Thời gian kết thúc</th>
+                                                        <th>Tổng số lần cấm</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody class="text-gray-600 fw-semibold"></tbody>
@@ -61,17 +61,17 @@
                                     </div>
                                     <div class="card mb-9">
                                         <div class="card-header">
-                                            <div class="card-title text-dark fs-3 fw-bolder">探测记录</div>
+                                            <div class="card-title text-dark fs-3 fw-bolder">Lịch sử kiểm tra</div>
                                         </div>
                                         <div class="card-body">
                                             <table class="table align-middle table-striped table-row-bordered text-nowrap gy-5 gs-7" id="zero_admin_detect_record">
                                                 <thead>
                                                     <tr class="text-start text-gray-400 fw-bold fs-7 text-uppercase gs-0">  
                                                         <th>ID</th>
-                                                        <th>用户ID</th>
-                                                        <th>节点ID</th>
-                                                        <th>规则ID</th>
-                                                        <th>时间</th>
+                                                        <th>USER ID</th>
+                                                        <th>ID Máy chủ</th>
+                                                        <th>ID Quy tắc</th>
+                                                        <th>Thời gian</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody class="text-gray-600 fw-semibold"></tbody>
@@ -105,40 +105,40 @@
                     </div>
                     <div class="modal-body scroll-y pt-0 pb-15 px-5 px-xl-20">
                         <div class="mb-13 text-center">
-                            <h1 class="mb-3">创建规则</h1>
+                            <h1 class="mb-3">Thêm quy tắc</h1>
                         </div>
                         <div class="d-flex flex-column mb-8">
                             <label class="d-flex align-items-center fs-6 fw-semibold mb-2" for="zero_create_ban_rule_name">
-                                <span class="required">规则名称</span>
+                                <span class="required">Tên quy tắc</span>
                             </label>
-                            <input type="text" value="" class="form-control form-control-solid" placeholder="规则名称" id="zero_create_ban_rule_name">
+                            <input type="text" value="" class="form-control form-control-solid" placeholder="Nhập tên quy tắc" id="zero_create_ban_rule_name">
                         </div>
                         <div class="d-flex flex-column mb-8">
                             <label class="d-flex align-items-center fs-6 fw-semibold mb-2" for="zero_create_ban_rule_description">
-                                <span class="required">规则描述</span>
+                                <span class="required">Mô tả quy tắc</span>
                             </label>
-                            <input type="text" value="" class="form-control form-control-solid" placeholder="规则描述" id="zero_create_ban_rule_description">
+                            <input type="text" value="" class="form-control form-control-solid" placeholder="Mô tả quy tắc" id="zero_create_ban_rule_description">
                         </div>
                         <div class="d-flex flex-column mb-8">
                             <label class="fs-6 fw-semibold mb-2" for="zero_create_ban_rule_regular_expressions">
-                                <span class="required">规则正则表达式</span>
+                                <span class="required">Biểu hiện</span>
                             </label>
-                            <input type="text" value="" class="form-control form-control-solid" placeholder="正则表达式" id="zero_create_ban_rule_regular_expressions">
+                            <input type="text" value="" class="form-control form-control-solid" placeholder="Nhập biểu hiện vi phạm" id="zero_create_ban_rule_regular_expressions">
                         </div>                   
                         <div class="d-flex flex-column mb-8">
                             <label class="fs-6 fw-semibold mb-2" for="zero_create_ban_rule_type">
-                                <span class="required">规则类型</span>
+                                <span class="required">Loại quy tắc</span>
                             </label>
                             <select class="form-select form-select-solid" data-control="select2" data-hide-search="true" id="zero_create_ban_rule_type">
-                                <option value="1">数据包明文匹配</option>
-                                <option value="2">数据包 HEX 匹配</option>
+                                <option value="1">Khớp dữ liệu gói tin</option>
+                                <option value="2">Phù hợp HEX của gói tin</option>
                             </select>
                         </div>
                         <div class="d-flex flex-center flex-row-fluid pt-12">
                             <button type="reset" class="btn btn-light me-3" data-bs-dismiss="modal">Hủy</button>
                             <button type="submit" class="btn btn-primary" data-kt-admin-create-ban-rule-action="submit" onclick="zeroAdminCreateBanRule()">
-                                <span class="indicator-label">submit</span>
-                                <span class="indicator-progress">please wait
+                                <span class="indicator-label">Thêm quy tắc</span>
+                                <span class="indicator-progress">Vui lòng chờ
                                 <span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
                             </button>
                         </div>
@@ -165,40 +165,40 @@
                     </div>
                     <div class="modal-body scroll-y pt-0 pb-15 px-5 px-xl-20">
                         <div class="mb-13 text-center">
-                            <h1 class="mb-3">创建规则</h1>
+                            <h1 class="mb-3">Chỉnh sửa quy tắc</h1>
                         </div>
                         <div class="d-flex flex-column mb-8">
                             <label class="d-flex align-items-center fs-6 fw-semibold mb-2" for="zero_update_ban_rule_name">
-                                <span class="required">规则名称</span>
+                                <span class="required">Tên quy tắc</span>
                             </label>
-                            <input type="text" value="" class="form-control form-control-solid" placeholder="规则名称" id="zero_update_ban_rule_name">
+                            <input type="text" value="" class="form-control form-control-solid" placeholder="Nhập tên quy tắc" id="zero_update_ban_rule_name">
                         </div>
                         <div class="d-flex flex-column mb-8">
                             <label class="d-flex align-items-center fs-6 fw-semibold mb-2" for="zero_update_ban_rule_description">
-                                <span class="required">规则描述</span>
+                                <span class="required">Mô tả quy tắc</span>
                             </label>
-                            <input type="text" value="" class="form-control form-control-solid" placeholder="规则描述" id="zero_update_ban_rule_description">
+                            <input type="text" value="" class="form-control form-control-solid" placeholder="Mô tả quy tắc" id="zero_update_ban_rule_description">
                         </div>
                         <div class="d-flex flex-column mb-8">
                             <label class="fs-6 fw-semibold mb-2" for="zero_update_ban_rule_regular_expressions">
-                                <span class="required">规则正则表达式</span>
+                                <span class="required">Biểu hiện</span>
                             </label>
-                            <input type="text" value="" class="form-control form-control-solid" placeholder="正则表达式" id="zero_update_ban_rule_regular_expressions">
+                            <input type="text" value="" class="form-control form-control-solid" placeholder="Nhập biểu hiện vi phạm" id="zero_update_ban_rule_regular_expressions">
                         </div>                   
                         <div class="d-flex flex-column mb-8">
                             <label class="fs-6 fw-semibold mb-2" for="zero_update_ban_rule_type">
-                                <span class="required">规则类型</span>
+                                <span class="required">Loại quy tắc</span>
                             </label>
                             <select class="form-select form-select-solid" data-control="select2" data-hide-search="true" id="zero_update_ban_rule_type">
-                                <option value="1">数据包明文匹配</option>
-                                <option value="2">数据包 HEX 匹配</option>
+                                <option value="1">Khớp dữ liệu gói tin</option>
+                                <option value="2">Phù hợp HEX của gói tin</option>
                             </select>
                         </div>
                         <div class="d-flex flex-center flex-row-fluid pt-12">
                             <button type="reset" class="btn btn-light me-3" data-bs-dismiss="modal">Hủy</button>
                             <button type="submit" class="btn btn-primary" data-kt-admin-update-ban-rule-action="submit" onclick="">
-                                <span class="indicator-label">submit</span>
-                                <span class="indicator-progress">please wait
+                                <span class="indicator-label">Lưu thay đổi</span>
+                                <span class="indicator-progress">Vui lòng chờ
                                 <span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
                             </button>
                         </div>

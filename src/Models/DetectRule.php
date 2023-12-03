@@ -16,6 +16,6 @@ class DetectRule extends Model
      */
     public function type(): string
     {
-        return $this->type == 1 ? i18n::get()->t('packet plaintext match') : i18n::get()->t('packet hex match');
+        return $this->type == 1 ? 'Khớp dữ liệu gói tin' : 'Phù hợp HEX của gói tin';
     }
 }

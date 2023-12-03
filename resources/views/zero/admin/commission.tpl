@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="vi">
     <head>
-        <title>{$config["website_name"]} 佣金</title>
+        <title>{$config["website_name"]} Quản lý rút tiền</title>
         
         <meta charset="UTF-8" />
         <meta name="renderer" content="webkit" />
@@ -30,7 +30,7 @@
 
                                     <div class="card mb-5">
                                         <div class="card-header">
-                                            <div class="card-title text-dark fs-3 fw-bolder">提现管理</div>
+                                            <div class="card-title text-dark fs-3 fw-bolder">Quản lý rút tiền</div>
                                         </div>
                                         <div class="card-body">
                                             {include file='table/table.tpl'}
@@ -38,7 +38,7 @@
                                     </div>
                                     <div class="card">
                                         <div class="card-header">
-                                            <div class="card-title text-dark fs-3 fw-bolder">佣金记录</div>
+                                            <div class="card-title text-dark fs-3 fw-bolder">Bản ghi hoa hồng</div>
                                         </div>
                                         <div class="card-body">
                                             <table class="table align-middle table-striped table-row-bordered text-nowrap gy-5 gs-7" id="zero_admin_commission_record">

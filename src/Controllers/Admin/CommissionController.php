@@ -20,20 +20,20 @@ class CommissionController extends AdminController
     {
         $table_config['total_column'] = [
             'id'       => 'ID',
-            'type'     => '提现类型',
-            'userid'   => '用户',
-            'total'    => '金额',
-            'status'   => '状态',
-            'datetime' => '时间',
+            'type'     => 'Loại rút tiền',
+            'userid'   => 'USER ID',
+            'total'    => 'Số tiền',
+            'status'   => 'Trạng thái',
+            'datetime' => 'Thời gian',
             'action'   => 'Thao tác'
         ];
         $table_config_commission['total_column'] = [
             'id'            => 'ID',
-            'order_amount'  => '原始金额',
-            'userid'        => '发起用户ID',
-            'invite_userid' => '获利用户ID',
-            'get_amount'    => '佣金',
-            'datetime'      => '时间'
+            'order_amount'  => 'Số tiền ban đầu',
+            'userid'        => 'ID người được mời',
+            'invite_userid' => 'ID người mời',
+            'get_amount'    => 'Hoa hồng',
+            'datetime'      => 'Thời gian'
         ];
         $table_config_commission['ajax_url'] = 'commission/ajax';
 
@@ -61,14 +61,14 @@ class CommissionController extends AdminController
                 'id'       => $rowData->id,
                 'userid'   => $rowData->userid,
                 'total'    => $rowData->total,
-                'type'     => $rowData->type === 1 ? '提现至余额' : '提现至USDT',
+                'type'     => $rowData->type === 1 ? 'Chuyển vào số dư' : 'Rút tiền mặt',
                 'status'   => $rowData->status(),
                 'datetime' => date('Y-m-d H:i:s', $rowData->created_at),
                 'action'   => <<<EOT
                                 <div class="btn-group dropstart"><a class="btn btn-light-primary btn-sm dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false">Thao tác</a>
                                     <ul    class = "dropdown-menu">
-                                    <li><a class = "dropdown-item" type = "button" onclick = "zeroAdminUpdateWithdrawCommission('mark_done', {$rowData->id})">完成</a></li>
-                                    <li><a class = "dropdown-item" type = "button" onclick = "zeroAdminUpdateWithdrawCommission('go_back', {$rowData->id})">拒绝</a></li>
+                                    <li><a class = "dropdown-item" type = "button" onclick = "zeroAdminUpdateWithdrawCommission('mark_done', {$rowData->id})">Hoàn thành</a></li>
+                                    <li><a class = "dropdown-item" type = "button" onclick = "zeroAdminUpdateWithdrawCommission('go_back', {$rowData->id})">Từ chối</a></li>
                                     </ul>
                                 </div>
                             EOT,
@@ -94,11 +94,11 @@ class CommissionController extends AdminController
                 $withdraw->status = 1;
                 if (!$withdraw->save()) {
                     $res['ret'] = 0;
-                    $res['msg'] = '标记失败';
+                    $res['msg'] = 'Đã đánh dấu là không thành công';
                     return $response->withJson($res);   
                 }
                 $res['ret'] = 1;
-                $res['msg'] = '标记成功';
+                $res['msg'] = 'Đã đánh dấu là thành công';
                 return $response->withJson($res);
             case 'go_back': 
                 $withdraw = Withdraw::find($id);
@@ -108,11 +108,11 @@ class CommissionController extends AdminController
                 $go_user->commission = bcadd($go_user->commission, $withdraw->total, 2);
                 if (!$go_user->save()) {
                     $res['ret'] = 0;
-                    $res['msg'] = '退回失败';
+                    $res['msg'] = 'Trả lại không thành công';
                     return $response->withJson($res);
                 }
                 $res['ret'] = 1;
-                $res['msg'] = '退回成功';
+                $res['msg'] = 'Đã trả lại thành công';
                 return $response->withJson($res);
         }
 

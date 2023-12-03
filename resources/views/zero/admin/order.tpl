@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="vi">
     <head>
-        <title>{$config["website_name"]} Đơn hàng</title>
+        <title>{$config["website_name"]} quản lý đơn hàng</title>
         
         <meta charset="UTF-8" />
         <meta name="renderer" content="webkit" />

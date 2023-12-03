@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="vi">
     <head>
-        <title>{$config["website_name"]} 记录</title>
+        <title>{$config["website_name"]} Nhật ký</title>
         
         <meta charset="UTF-8" />
         <meta name="renderer" content="webkit" />
@@ -29,7 +29,7 @@
                                 <div id="kt_app_content_container" class="app-container container-xxl">
                                     <div class="card mb-5">
                                         <div class="card-header">
-                                            <div class="card-title text-dark fs-3 fw-bolder">在线用户</div>
+                                            <div class="card-title text-dark fs-3 fw-bolder">Người dùng trực tuyến</div>
                                         </div>
                                         <div class="card-body">
                                             <table class="table align-middle table-striped table-row-bordered text-nowrap gy-5 gs-7" id="zero_admin_alive_record">
@@ -46,7 +46,7 @@
                                     </div>
                                     <div class="card mb-5">
                                         <div class="card-header">
-                                            <div class="card-title text-dark fs-3 fw-bolder">登录记录</div>
+                                            <div class="card-title text-dark fs-3 fw-bolder">Nhật ký đồng bộ máy chủ</div>
                                         </div>
                                         <div class="card-body">
                                             <table class="table align-middle table-striped table-row-bordered text-nowrap gy-5 gs-7" id="zero_admin_signin_record">
@@ -63,7 +63,7 @@
                                     </div>
                                     <div class="card mb-5">
                                         <div class="card-header">
-                                            <div class="card-title text-dark fs-3 fw-bolder">订阅记录</div>
+                                            <div class="card-title text-dark fs-3 fw-bolder">Lịch sử đồng bộ máy chủ</div>
                                         </div>
                                         <div class="card-body">
                                             <table class="table align-middle table-striped table-row-bordered text-nowrap gy-5 gs-7" id="zero_admin_subscribe_record">
@@ -80,7 +80,7 @@
                                     </div>
                                     <div class="card mb-5">
                                         <div class="card-header">
-                                            <div class="card-title text-dark fs-3 fw-bolder">流量记录</div>
+                                            <div class="card-title text-dark fs-3 fw-bolder">Nhật ký sử dụng</div>
                                         </div>
                                         <div class="card-body">
                                             <table class="table align-middle table-striped table-row-bordered text-nowrap gy-5 gs-7" id="zero_admin_traffic_record">

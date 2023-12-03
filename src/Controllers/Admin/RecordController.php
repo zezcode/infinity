@@ -21,39 +21,39 @@ class RecordController extends AdminController
     {
         $table_config_alive['total_column'] = [
             'id'         => 'ID',
-            'userid'     => '用户ID',
-            'node_name'  => '节点名',
+            'userid'     => 'USER ID',
+            'node_name'  => 'Máy chủ',
             'ip'         => 'IP',
-            'location'   => '归属地',
-            'latest_at' => '时间'
+            'location'   => 'Vị trí',
+            'latest_at' => 'Thời gian'
     ];
         $table_config_alive['ajax_url']      = 'record/ajax/alive';
         $table_config_signin['total_column'] = [
             'id'         => 'ID',
-            'userid'     => '用户ID',
+            'userid'     => 'USER ID',
             'ip'         => 'IP',
-            'location'   => '归属地',
-            'created_at' => '时间',
-            'type'       => '类型'
+            'location'   => 'Vị trí',
+            'created_at' => 'Thời gian',
+            'type'       => 'Kết quả'
         ];
         $table_config_signin['ajax_url']        = 'record/ajax/signin';
         $table_config_subscribe['total_column'] = [
             'id'             => 'ID',
-            'user_id'        => '用户ID',
-            'request_user_agent' => '类型',
+            'user_id'        => 'USER ID',
+            'request_user_agent' => 'User Agent',
             'request_ip'     => 'IP',
-            'location'       => '归属地',
-            'created_at'     => '时间',
+            'location'       => 'Vị trí',
+            'created_at'     => 'Thời gian',
         ];
         $table_config_subscribe['ajax_url']   = 'record/ajax/subscribe';
         $table_config_traffic['total_column'] = [
             'id'              => 'ID',
-            'user_id'         => '用户ID',
-            'node_name'       => '使用节点',
-            'rate'            => '倍率',
-            'origin_traffic'  => '实际使用流量',
-            'traffic'         => '结算流量',
-            'created_at'      => '记录时间'
+            'user_id'         => 'USER ID',
+            'node_name'       => 'Máy chủ',
+            'rate'            => 'Phóng đại',
+            'origin_traffic'  => 'Lưu lượng thực tế',
+            'traffic'         => 'Lưu lượng phóng đại',
+            'created_at'      => 'Thời gian'
         ];
         $table_config_traffic['ajax_url'] = 'record/ajax/traffic';
         $this->view()
@@ -89,7 +89,7 @@ class RecordController extends AdminController
                     return [
                         'id'         => $rowData->id,
                         'userid'     => $rowData->userid,
-                        'node_name'  => $rowData->node()->name ?? '暂无',
+                        'node_name'  => $rowData->node()->name ?? 'Chưa có',
                         'ip'         => Tools::getRealIp($rowData->ip),
                         'location'   => Tools::getIPLocation(Tools::getRealIp($rowData->ip)),
                         'latest_at'  => date('Y-m-d H:i:s', $rowData->latest_at),
