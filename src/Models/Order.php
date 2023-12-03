@@ -33,10 +33,10 @@ class Order extends Model
 
     public function orderType() {
         $order_type = [
-            1   =>  '新购产品',
-            2   =>  '充值余额',
-            3   =>  '续费产品',
-            4   =>  '升级产品',
+            1   =>  'Mua mới',
+            2   =>  'Nạp tiền',
+            3   =>  'Đổi gói',
+            4   =>  'Nâng cấp',
         ];
         return $order_type[$this->order_type];
     }

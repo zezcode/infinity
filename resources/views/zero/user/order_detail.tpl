@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-	<title>{$config["website_name"]} Order Detail</title>
+	<title>{$config["website_name"]} Thông tin đơn hàng</title>
         
         <meta charset="UTF-8" />
         <meta name="renderer" content="webkit" />
@@ -44,15 +44,15 @@
                                                     
                                                     <thead>
                                                         <tr class="text-start text-gray-400 fw-bold fs-7 text-uppercase gs-0">
-                                                            <th class="min-w-175px">{$trans->t('type')}</th>
-                                                            <th class="min-w-70px text-end">{$trans->t('status')}</th>
+                                                            <th class="min-w-175px">Kiểu</th>
+                                                            <th class="min-w-70px text-end">Trạng thái</th>
 															
-                                                            <th class="min-w-70px text-end">{$trans->t('payment method')}</th>
+                                                            <th class="min-w-70px text-end">Phương thức thanh toán</th>
                                                             
-                                                            <th class="min-w-100px text-end">{$trans->t('order number')}</th>
-                                                            <th class="min-w-70px text-end">{$trans->t('quantity')}</th>
-                                                            <th class="min-w-100px text-end">{$trans->t('price')}</th>
-                                                            <th class="min-w-100px text-end">{$trans->t('total')}</th>
+                                                            <th class="min-w-100px text-end">Mã đơn hàng</th>
+                                                            <th class="min-w-70px text-end">Số lượng</th>
+                                                            <th class="min-w-100px text-end">Giá</th>
+                                                            <th class="min-w-100px text-end">Tổng cộng</th>
                                                         </tr>
                                                     </thead>
                                                     
@@ -64,7 +64,7 @@
                                                                 <div class="d-flex align-items-center">
                                                                     <div class="ms-5">
                                                                         <a class="fw-bold text-gray-600 text-hover-primary">{$order_type[$order->order_type]}</a>
-                                                                        <div class="fs-7 text-muted">{$trans->t('date')}: {date('Y-m-d H:i:s', $order->created_at)}</div>
+                                                                        <div class="fs-7 text-muted">Ngày: {date('Y-m-d H:i:s', $order->created_at)}</div>
                                                                     </div>
                                                                     
                                                                 </div>
@@ -72,11 +72,11 @@
                                                             
                                                             <td class="text-end">
                                                                 {if $order->order_status == '1'}
-                                                                <span class="badge badge-warning fs-6 fw-bold">{$trans->t('pending')}</span>
+                                                                <span class="badge badge-warning fs-6 fw-bold">Đang chờ</span>
                                                                 {else if $order->order_status == '2'}
-                                                                <span class="badge badge-success fs-6 fw-bold">{$trans->t('paid')}</span>
+                                                                <span class="badge badge-success fs-6 fw-bold">Đã thanh toán</span>
 																{else if $order->order_status == '0'}
-																<span class="badge badge-danger fs-6 fw-bold">{$trans->t('invalid')}</span>	
+																<span class="badge badge-danger fs-6 fw-bold">Đã hủy</span>	
                                                                 {/if}   
                                                             </td>
 															
@@ -94,23 +94,23 @@
                                                         </tr>                                                                                                              
                                                         {if $order->order_type != '2'}                                                                                                            
                                                             <tr>
-                                                                <td colspan="6" class="text-end">余额抵扣</td>
+                                                                <td colspan="6" class="text-end">Trừ số dư</td>
                                                                 <td class="text-end">{$order->credit_paid}</td>
                                                             </tr>                                                       
                                                             <tr>
-                                                                <td colspan="6" class="text-end">{$trans->t('discount')}</td>
+                                                                <td colspan="6" class="text-end">Giảm giá</td>
                                                                 <td class="text-end">{$order->discount_amount}</td>
                                                             </tr>
                                                         {/if}
                                                                                             
                                                         <tr>
-                                                            <td colspan="6" class="fs-3 text-dark text-end">{$trans->t('total')}</td>
+                                                            <td colspan="6" class="fs-3 text-dark text-end">Tổng cộng</td>
                                                             <td class="text-dark fs-3 fw-bolder text-end">{$order->order_total}</td>
                                                         </tr>
 														
 														{if $order->order_status == '2'}
 														<tr>
-                                                            <td colspan="6" class="fs-3 text-dark text-end">{$trans->t('paid')}</td>
+                                                            <td colspan="6" class="fs-3 text-dark text-end">Đã thanh toán</td>
                                                             <td class="text-dark fs-3 fw-bolder text-end">{$order->order_total}</td>
                                                         </tr>
 														{/if}
@@ -123,7 +123,7 @@
 											{if $order->order_status === 1}
                                                 {if $order->order_total != 0}
                                                     <div class="col-lg-12">
-                                                        <label class="col-form-label fs-3 fw-bold">{$trans->t('payment method')}:</label>                                                       
+                                                        <label class="col-form-label fs-3 fw-bold">Phương thức thanh toán:</label>                                                       
                                                         <ul class="nav nav-pills d-flex flex-column flex-md-row justify-content-center" role="tablist" id="payment_method">                                                         
                                                             {foreach $payments as $payment}
                                                                 <li class="nav-item mb-3">

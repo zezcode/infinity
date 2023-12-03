@@ -37,18 +37,18 @@ class OrderController extends BaseController
             $product = Product::find($order->product_id);
             $product_name = $product->name;
             $order_type = [
-                1   =>  I18n::get()->t('purchase product') .  ': ' . $product_name . '-' . $product->productPeriod($order->product_price),
-                3   =>  I18n::get()->t('renewal product') .': ' . $product_name . '-' . $product->productPeriod($order->product_price),
-                4   =>  I18n::get()->t('upgrade product') .': ' . $product_name . '-' . $product->productPeriod($order->product_price),
+                1   =>  I18n::get()->t('Mua gói') .  ': ' . $product_name . '-' . $product->productPeriod($order->product_price),
+                3   =>  I18n::get()->t('Gia hạn gói') .': ' . $product_name . '-' . $product->productPeriod($order->product_price),
+                4   =>  I18n::get()->t('Nâng cấp gói') .': ' . $product_name . '-' . $product->productPeriod($order->product_price),
             ];
         } else {
             $product_name = '';
             $product = [];
             $order_type = [
-                2   =>  I18n::get()->t('add credit') .': ' . $order->order_total,
+                2   =>  I18n::get()->t('Nạp tiền') .': ' . $order->order_total,
             ];
         }
-        $paypal_currency_unit = Setting::obtain('currency_unit') ?: 'USD';
+        $paypal_currency_unit = Setting::obtain('currency_unit') ?: 'VND';
         $payments = Payment::where('enable', 1)->get();
             $this->view()
                 ->assign('order', $order)
@@ -87,7 +87,7 @@ class OrderController extends BaseController
                         throw new \Exception(I18n::get()->t('sold'));
                     }
                     if ($user->product_id == $product->id) {                      
-                        throw new \Exception('已有该产品，请在主页点击续费');
+                        throw new \Exception('Bạn đang dùng gói này');
                     }
 
                     $order                 = new Order();
@@ -371,12 +371,12 @@ class OrderController extends BaseController
             
             if (!is_null($coupons->limited_product)) {
                 if (!in_array($product_id, json_decode($coupons->limited_product, true))) {
-                    throw new \Exception(I18n::get()->t('此优惠码不适用于此产品'));
+                    throw new \Exception(I18n::get()->t('Mã giảm giá không áp dụng cho sản phẩm này'));
                 }
             }
             if (!is_null($coupons->limited_product_period)) {
                 if (!in_array($product_period, json_decode($coupons->limited_product_period, true))) {
-                    throw new \Exception(I18n::get()->t('此优惠码不适用于此产品周期'));
+                    throw new \Exception(I18n::get()->t('Mã giảm giá này không hợp lệ cho chu kỳ sản phẩm này'));
                 }
             }        
             if (!is_null($coupons->per_use_limit)) {
@@ -385,12 +385,12 @@ class OrderController extends BaseController
                     ->whereNotIn('order_status', [0, 1])
                     ->count();
                 if ($use_count >= $coupons->per_use_limit) {
-                    throw new \Exception(I18n::get()->t('promo code have been used up'));
+                    throw new \Exception(I18n::get()->t('Mã giảm giá đã được sử dụng hết'));
                 }
             }
            
             if ($coupons->total_use_count <= 0 && !is_null($coupons->total_use_count)) {
-                throw new \Exception(I18n::get()->t('promo code have been used up'));
+                throw new \Exception(I18n::get()->t('Mã giảm giá đã được sử dụng hết'));
             }
         } catch (\Exception $e) {
             return $response->withJson([

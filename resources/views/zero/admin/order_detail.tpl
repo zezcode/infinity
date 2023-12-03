@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="vi">
     <head>
-	<title>{$config["website_name"]} Order Detail</title>
+	<title>{$config["website_name"]} Thông tin đơn hàng</title>
         
         <meta charset="UTF-8" />
         <meta name="renderer" content="webkit" />
@@ -42,13 +42,13 @@
                                                     
                                                     <thead>
                                                         <tr class="text-start text-gray-400 fw-bold fs-7 text-uppercase gs-0">
-                                                            <th class="min-w-175px">type</th>
-                                                            <th class="min-w-70px text-end">status</th>
-                                                            <th class="min-w-70px text-end">payment method</th>
-                                                            <th class="min-w-100px text-end">order number</th>
-                                                            <th class="min-w-70px text-end">quantity</th>
-                                                            <th class="min-w-100px text-end">price</th>
-                                                            <th class="min-w-100px text-end">total</th>
+                                                            <th class="min-w-175px">Kiểu</th>
+                                                            <th class="min-w-70px text-end">Trạng thái</th>
+                                                            <th class="min-w-70px text-end">Phương thức thanh toán</th>
+                                                            <th class="min-w-100px text-end">Mã đơn hàng</th>
+                                                            <th class="min-w-70px text-end">Số lượng</th>
+                                                            <th class="min-w-100px text-end">Giá</th>
+                                                            <th class="min-w-100px text-end">Tổng cộng</th>
                                                         </tr>
                                                     </thead>
                                                     
@@ -88,22 +88,22 @@
                                                         </tr>
                                                         {if $order->order_type != '2'}                                                                                                            
                                                         <tr>
-                                                            <td colspan="6" class="text-end">余额抵扣</td>
+                                                            <td colspan="6" class="text-end">Trừ số dư</td>
                                                             <td class="text-end">{$order->credit_paid}</td>
                                                         </tr>                                                       
                                                         <tr>
-                                                            <td colspan="6" class="text-end">discount</td>
+                                                            <td colspan="6" class="text-end">Giảm giá</td>
                                                             <td class="text-end">{$order->discount_amount}</td>
                                                         </tr>
                                                         {/if}														                                                        
                                                         <tr>
-                                                            <td colspan="6" class="fs-3 text-dark text-end">total</td>
+                                                            <td colspan="6" class="fs-3 text-dark text-end">Tổng cộng</td>
                                                             <td class="text-dark fs-3 fw-bolder text-end">{$order->order_total}</td>
                                                         </tr>
 														
 														{if $order->order_status == '2'}
 														<tr>
-                                                            <td colspan="6" class="fs-3 text-dark text-end">paid</td>
+                                                            <td colspan="6" class="fs-3 text-dark text-end">Đã thanh toán</td>
                                                             <td class="text-dark fs-3 fw-bolder text-end">{$order->order_total}</td>
                                                         </tr>
 														{/if}

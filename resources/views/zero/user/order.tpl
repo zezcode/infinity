@@ -39,11 +39,11 @@
                                             <table class="table align-middle table-striped table-row-bordered text-nowrap gy-5 gs-7" id="zero_order_table" style="width:100%">
                                                 <thead>
                                                     <tr class="text-start text-gray-400 fw-bold fs-7 text-uppercase gs-0">                                                       
-                                                        <th>{$trans->t('Số tiền')}</th>
-                                                        <th>{$trans->t('Tình trạng')}</th>
-														<th>{$trans->t('Kiểu')}</th>
-                                                        <th>{$trans->t('Ngày')}</th>
-														<th>{$trans->t('Hoạt động')}</th>
+                                                        <th>Số tiền</th>
+                                                        <th>Trạng thái</th>
+														<th>Kiểu</th>
+                                                        <th>Thời gian</th>
+														<th>Thông tin</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody class="text-gray-600 fw-semibold"></tbody>

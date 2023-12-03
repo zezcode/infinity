@@ -39,7 +39,7 @@
                                     {/foreach}
                                 </div>
                             {else}
-                                <span class="fw-bold fs-3 text-center">对不起，系统中没有任何节点</span>
+                                <span class="fw-bold fs-3 text-center">Hiện không có máy chủ nào trên hệ thống</span>
                             {/if}
                             <div class="tab-content">
                                 {foreach $class as $grade}
@@ -98,18 +98,18 @@
         <div class="modal-content shadow-lg">
             <div class="modal-header">
                 <h4 class="modal-title">
-                    <strong id="zero_modal_vmess_node_info_remark">node name</strong>
+                    <strong id="zero_modal_vmess_node_info_remark">Tên máy chủ</strong>
                 </h4>
             </div>
             <div class="modal-body align-items-center" id="zero_modal_vmess_node_info_body">
                 <nav class="nav nav-tabs nav-justified" role="tablist">
                     <button class="nav-link active" type="button" data-bs-toggle="tab" aria-selected="true"
                         data-bs-target="#zero_modal_tab_vmess_qrcode">
-                        qrcode
+                        QR Code
                     </button>
                     <button class="nav-link" type="button" data-bs-toggle="tab" aria-selected="false"
                         data-bs-target="#zero_modal_tab_vmess_config">
-                        config
+                        Cấu hình
                     </button>
                 </nav>
                 <div class="tab-content m-0 p-0">
@@ -163,18 +163,18 @@
         <div class="modal-content shadow-lg">
             <div class="modal-header">
                 <h4 class="modal-title">
-                    <strong id="zero_modal_vless_node_info_remark">node name</strong>
+                    <strong id="zero_modal_vless_node_info_remark">Tên máy chủ</strong>
                 </h4>
             </div>
             <div class="modal-body align-items-center" id="zero_modal_vless_node_info_body">
                 <nav class="nav nav-tabs nav-justified" role="tablist">
                     <button class="nav-link active" type="button" data-bs-toggle="tab" aria-selected="true"
                         data-bs-target="#zero_modal_tab_vless_qrcode">
-                        qrcode
+                        QR Code
                     </button>
                     <button class="nav-link" type="button" data-bs-toggle="tab" aria-selected="false"
                         data-bs-target="#zero_modal_tab_vless_config">
-                        config
+                        Cấu hình
                     </button>
                 </nav>
                 <div class="tab-content m-0 p-0">
@@ -234,18 +234,18 @@
         <div class="modal-content shadow-lg">
             <div class="modal-header">
                 <h4 class="modal-title">
-                    <strong id="zero_modal_shadowsocks_node_info_remark">node name</strong>
+                    <strong id="zero_modal_shadowsocks_node_info_remark">Tên máy chủ</strong>
                 </h4>
             </div>
             <div class="modal-body align-items-center" id="zero_modal_shadowsocks_node_info_body">
                 <nav class="nav nav-tabs nav-justified" role="tablist">
                     <button class="nav-link active" type="button" data-bs-toggle="tab" aria-selected="true"
                         data-bs-target="#zero_modal_tab_shadowsocks_qrcode">
-                        qrcode
+                        QR Code
                     </button>
                     <button class="nav-link" type="button" data-bs-toggle="tab" aria-selected="false"
                         data-bs-target="#zero_modal_tab_shadowsocks_config">
-                        config
+                        Cấu hình
                     </button>
                 </nav>
                 <div class="tab-content m-0 p-0">
@@ -286,18 +286,18 @@
         <div class="modal-content shadow-lg">
             <div class="modal-header">
                 <h4 class="modal-title">
-                    <strong id="zero_modal_trojan_node_info_remark">node name</strong>
+                    <strong id="zero_modal_trojan_node_info_remark">Tên máy chủ</strong>
                 </h4>
             </div>
             <div class="modal-body align-items-center" id="zero_modal_trojan_node_info_body">
                 <nav class="nav nav-tabs nav-justified" role="tablist">
                     <button class="nav-link active" type="button" data-bs-toggle="tab" aria-selected="true"
                         data-bs-target="#zero_modal_tab_trojan_qrcode">
-                        qrcode
+                        QR Code
                     </button>
                     <button class="nav-link" type="button" data-bs-toggle="tab" aria-selected="false"
                         data-bs-target="#zero_modal_tab_trojan_config">
-                        config
+                        Cấu hình
                     </button>
                 </nav>
                 <div class="tab-content m-0 p-0">
@@ -340,18 +340,18 @@
         <div class="modal-content shadow-lg">
             <div class="modal-header">
                 <h4 class="modal-title">
-                    <strong id="zero_modal_hysteria_node_info_remark">node name</strong>
+                    <strong id="zero_modal_hysteria_node_info_remark">Tên máy chủ</strong>
                 </h4>
             </div>
             <div class="modal-body align-items-center" id="zero_modal_hysteria_node_info_body">
                 <nav class="nav nav-tabs nav-justified" role="tablist">
                     <button class="nav-link active" type="button" data-bs-toggle="tab" aria-selected="true"
                         data-bs-target="#zero_modal_tab_hysteria_qrcode">
-                        qrcode
+                        QR Code
                     </button>
                     <button class="nav-link" type="button" data-bs-toggle="tab" aria-selected="false"
                         data-bs-target="#zero_modal_tab_hysteria_config">
-                        config
+                        Cấu hình
                     </button>
                 </nav>
                 <div class="tab-content m-0 p-0">
