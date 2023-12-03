@@ -15,9 +15,9 @@ final class PaymentController extends AdminController
     {
         $table_config['total_column'] = [
             'id'      => 'ID',
-            'name'    => '名称',
-            'gateway' => '网关',
-            'enable'  => '启用',
+            'name'    => 'Tên',
+            'gateway' => 'Cổng',
+            'enable'  => 'Bật/tắt',
             'action'  => 'Thao tác',
         ];
         $table_config['ajax_url'] = 'payment/ajax';
@@ -32,7 +32,7 @@ final class PaymentController extends AdminController
         if (empty(Setting::obtain('website_url'))) {
             return $response->withJson([
                 'ret'   => 0,
-                'msg'   => '请设置站点URL'
+                'msg'   => 'Vui lòng đặt URL trang web'
             ]);
         }
 
@@ -56,7 +56,7 @@ final class PaymentController extends AdminController
 
         return $response->withJson([
             'ret'   => 1,
-            'msg'   => '成功'
+            'msg'   => 'Thành công'
         ]);
     }
 
@@ -65,7 +65,7 @@ final class PaymentController extends AdminController
         if (empty(Setting::obtain('website_url'))) {
             return $response->withJson([
                 'ret'   => 0,
-                'msg'   => '请设置站点URL'
+                'msg'   => 'Vui lòng đặt URL trang web'
             ]);
         }
         
@@ -85,7 +85,7 @@ final class PaymentController extends AdminController
 
         return $response->withJson([
             'ret' => 1,
-            'msg' => '成功'
+            'msg' => 'Thành công'
         ]);
     }
 
