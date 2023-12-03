@@ -22,7 +22,7 @@
 		
 		<div class="d-flex flex-column flex-root" id="kt_app_root">
 			
-			<style>body { background-image: url('theme/zero/assets/media/auth/bg7.jpg'); } [data-theme="dark"] body { background-image: url('theme/zero/assets/media/auth/bg7-dark.jpg'); }</style>
+			<style>body { background-image: url('theme/infinity/media/auth/bg7.jpg'); } [data-theme="dark"] body { background-image: url('theme/infinity/media/auth/bg7-dark.jpg'); }</style>
 			
 			
 			<div class="d-flex flex-column flex-center flex-column-fluid">

@@ -145,7 +145,7 @@
 								<div class="card-title  fw-bolder fs-3">Chi tiết sử dụng</div>
 								<div class="card-toolbar">
 									<span
-										class="badge badge-light-primary badge fs-4 fw-semibold">Tốc độ giới hạn:{if $user->node_speedlimit == 0}Không giới hạn{else}{$user->node_speedlimit}Mbps{/if}</span>
+										class="badge badge-light-primary badge fs-4 fw-semibold">Tốc độ giới hạn:{if $user->node_speedlimit == 0} Không giới hạn{else}{$user->node_speedlimit}Mbps{/if}</span>
 								</div>
 							</div>
 							<div class="card-body d-flex flex-column pt-0">
