@@ -100,7 +100,7 @@ class User extends Command
     public function createAdmin()
     {
         if (count($this->argv) === 3) {
-            echo -e 'Tiến thành tạo tài khoản Admin \n';
+            echo "Tiến thành tạo tài khoản Admin \n";
               // ask for input
             fwrite(STDOUT, '(1/3) Nhập Email Admin: ') . PHP_EOL;
               // get input
@@ -120,7 +120,7 @@ class User extends Command
         }
 
         if (strtolower($y) == 'y') {
-            echo -e 'Đang tạo tài khoản Admin \n';
+            echo "Đang tạo tài khoản Admin \n";
             $current_timestamp = time();
               // create admin user
             $user                     = new ModelsUser();
@@ -142,12 +142,12 @@ class User extends Command
             $user->subscription_token = $user->createSubToken();
 
             if ($user->save()) {
-                echo -e 'Tạo tài khoản Admin thành công \n' . PHP_EOL;
+                echo "Tạo tài khoản Admin thành công \n" . PHP_EOL;
             } else {
-                echo -e 'Tạo không thành công, hãy kiểm tra lại database \n' . PHP_EOL;
+                echo "Tạo không thành công, hãy kiểm tra lại database \n" . PHP_EOL;
             }
         } else {
-            echo -e 'Đã hủy quá trình tạo tài khoản Admin \n' . PHP_EOL;
+            echo "Đã hủy quá trình tạo tài khoản Admin \n" . PHP_EOL;
         }
     }
 
