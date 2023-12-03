@@ -79,7 +79,7 @@
                                     type="text" disabled value="{$edit_user->withdraw_account}">
                             </div>
                             <div class="col-xxl-6">
-                                <label class="form-label required" for="passwd">Mật khẩu ShadowSock</label>
+                                <label class="form-label required" for="passwd">Mật khẩu ShadowSocks</label>
                                 <input class="form-control mb-5" id="passwd" name="passwd" type="text" disabled
                                     value="{$edit_user->passwd}">
                                 <label class="form-label required" for="uuid">UUID VMESS/TROJAN</label>

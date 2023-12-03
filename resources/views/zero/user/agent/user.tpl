@@ -246,7 +246,7 @@
 										<!--end::Menu item-->
 										<!--begin::Menu item-->
 										<div class="menu-item px-5">
-											<a href="/user/logout" class="menu-link px-5 fw-bold">signout</a>
+											<a href="/user/logout" class="menu-link px-5 fw-bold">Đăng xuất</a>
 										</div>
 										<!--end::Menu item-->
 									</div>
