@@ -34099,7 +34099,7 @@ textarea.form-control-lg {
 }
 
 [data-bs-theme=dark] {
-    --bs-text-muted: #D8D8D8;
+    --bs-text-muted: #B4B4B4;
     --bs-gray-100: #1b1b29;
     --bs-gray-100-rgb: 27,27,41;
     --bs-gray-200: #2B2B40;
@@ -34168,7 +34168,7 @@ textarea.form-control-lg {
     --bs-text-warning: #ffc700;
     --bs-text-danger: #f1416c;
     --bs-text-dark: #FFFFFF;
-    --bs-text-muted: #D8D8D8;
+    --bs-text-muted: #B4B4B4;
     --bs-text-gray-100: #1b1b29;
     --bs-text-gray-200: #2B2B40;
     --bs-text-gray-300: #323248;
