@@ -259,7 +259,7 @@ class ZeroController extends BaseController
                     return [
                         'x' => $date,
                         'y' => $flow,
-                        'name' => I18n::get()->t('traffic'),
+                        'name' => 'Lưu lượng',
                     ];
                 }, array_keys($trafficData), $trafficData);
                 return $response->withJson($datas);

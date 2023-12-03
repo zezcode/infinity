@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="vi">
     <head>
-        <title>{$config["website_name"]} 知识库</title>
+        <title>{$config["website_name"]} Quản lý hướng dẫn</title>
         
         <meta charset="UTF-8" />
         <meta name="renderer" content="webkit" />
@@ -29,10 +29,10 @@
                                 <div id="kt_app_content_container" class="app-container container-xxl">
                                     <div class="card">
                                         <div class="card-header">
-                                            <div class="card-title text-dark fs-3 fw-bolder">知识库</div>
+                                            <div class="card-title text-dark fs-3 fw-bolder">Quản lý hướng dẫn</div>
                                             <div class="card-toolbar">
                                                 <button class="btn btn-primary btn-sm fs-bold" data-bs-toggle="modal" data-bs-target="#zero_admin_modal_knowledge">
-                                                    <i class="bi bi-plus-lg fs-2"></i>添加知识
+                                                    <i class="bi bi-plus-lg fs-2"></i>Thêm hướng dẫn
                                                 </button>
                                             </div>
                                         </div>
@@ -67,13 +67,13 @@
                     </div>
                     <div class="modal-body scroll-y pt-0 pb-15 px-5 px-xl-20">
                         <div class="mb-13 text-center">
-                            <h1 class="mb-3">添加文档</h1>
+                            <h1 class="mb-3">Thêm hướng dẫn</h1>
                         </div>
                         <div class="d-flex flex-column mb-8">
-                            <label class="form-label fw-bold" for="zero_admin_knowledge_title">标题</label>
-                            <input class="form-control mb-5" id="zero_admin_knowledge_title" value="">
-                            <label class="form-label fw-bold" for="zero_admin_knowledge_platform">平台</label>
-                            <select class="form-select mb-5" id="zero_admin_knowledge_platform" value="" data-control="select2" data-hide-search="true" data-placeholder="选择平台">
+                            <label class="form-label fw-bold" for="zero_admin_knowledge_title">Tiêu đề</label>
+                            <input class="form-control mb-5" placeholder="Nhập ít hơn 20 ký tự" id="zero_admin_knowledge_title" value="">
+                            <label class="form-label fw-bold" for="zero_admin_knowledge_platform">Hệ điều hành</label>
+                            <select class="form-select mb-5" id="zero_admin_knowledge_platform" value="" data-control="select2" data-hide-search="true" data-placeholder="Chọn hệ điều hành">
                                 <option></option>
                                 <option value="windows">Windows</option>
                                 <option value="android">Android</option>
@@ -81,10 +81,11 @@
                                 <option value="macos">MACOS</option>
                                 <option value="others">Others</option>
                             </select>
-                            <label class="form-label fw-bold" for="zero_admin_knowledge_client">客户端<i class="bi bi-question-octagon mx-3" data-bs-toggle="tooltip" title="当选项中没有你需要的选择时，你可以直接在搜索框输入你需要的值。请注意，输入的值必须是全部小写，且不包含任何特殊符合"></i></label>
-                            <select class="form-select mb-5" id="zero_admin_knowledge_client" value="" data-control="select2" data-hide-search="false" data-dropdown-parent="#zero_admin_modal_knowledge" data-placeholder="选择客户端" data-tags="true">
+                            <label class="form-label fw-bold" for="zero_admin_knowledge_client">Ứng dụng<i class="bi bi-question-octagon mx-3" data-bs-toggle="tooltip" title="Nếu không có ứng dụng bạn cần, bạn có thể nhập trực tiếp tên ứng dụng vào hộp tìm kiếm.Lưu ý tên ứng dụng nhập vào phải hoàn toàn là chữ thường và không chứa bất kỳ ký tự đặc biệt nào"></i></label>
+                            <select class="form-select mb-5" id="zero_admin_knowledge_client" value="" data-control="select2" data-hide-search="false" data-dropdown-parent="#zero_admin_modal_knowledge" data-placeholder="Chọn ứng dụng" data-tags="true">
                                 <option></option>
                                 <option value="clash">Clash</option>
+                                <option value="v2rayng">V2RayNG</option>
                                 <option value="singbox">SingBox</option>
                                 <option value="surge">Surge</option>
                                 <option value="sagernet">Sagernet</option>
@@ -100,8 +101,8 @@
                         <div class="d-flex flex-center flex-row-fluid pt-12">
                             <button type="reset" class="btn btn-light me-3" data-bs-dismiss="modal">Hủy</button>
                             <button type="submit" class="btn btn-primary" data-kt-admin-knowledge-action="submit" onclick="zeroAdminKnowledge('create')">
-                                <span class="indicator-label">submit</span>
-                                <span class="indicator-progress">please wait
+                                <span class="indicator-label">Lưu lại</span>
+                                <span class="indicator-progress">Vui lòng chờ
                                 <span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
                             </button>
                         </div>

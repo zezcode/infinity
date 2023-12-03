@@ -13,10 +13,10 @@ class KnowledgeController extends AdminController
     {
         $table_config['total_column'] = [
             'id'       => 'ID',
-            'title'    => '标题',
-            'platform' => '平台',
-            'client'   => '客户端',
-            'date'     => '日期',
+            'title'    => 'Tiêu đề',
+            'platform' => 'Hệ điều hành',
+            'client'   => 'Ứng dụng',
+            'date'     => 'Ngày',
             'action'   => 'Thao tác',
         ];
         
@@ -39,7 +39,7 @@ class KnowledgeController extends AdminController
 
         return $response->withJson([
             'ret'   => 1,
-            'msg'   => '添加成功',
+            'msg'   => 'Thêm hướng dẫn thành công',
         ]);
     }
 
@@ -57,7 +57,7 @@ class KnowledgeController extends AdminController
 
         return $response->withJson([
             'ret'   => 1,
-            'msg'   => '更新成功',
+            'msg'   => 'Chỉnh sửa thành công',
         ]);
     }
 

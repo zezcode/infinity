@@ -28,7 +28,7 @@ final class ProductController extends BaseController
             ],
             [
                 'type' => 2,
-                'name' => $trans->t('traffic'),
+                'name' => 'traffic',
             ],
             [
                 'type' => 3,

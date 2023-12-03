@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>{$config["website_name"]} Clash</title>
+        <title>{$config["website_name"]} Qv2ray</title>
         <link href="/theme/infinity/css/zero.css" rel="stylesheet" type="text/css"/>
         <meta charset="UTF-8" />
         <meta name="renderer" content="webkit" />
@@ -36,6 +36,9 @@
                                                         <div class="fs-2 fw-bold text-dark">
                                                             {$knowledge->title}
                                                         </div>
+                                                    </div>
+                                                    <div class="card-toolbar">
+                                                        <a class="btn btn-outline copy-text hover-scale" data-clipboard-text="{$subInfo}">Sao chép liên kết đăng kí</a>
                                                     </div>
                                                 </div>
                                                 <div class="card-body">                                                   

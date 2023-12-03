@@ -219,7 +219,7 @@
 											<div class="d-flex align-items-center flex-wrap mb-8">
 												<div class="symbol symbol-30px symbol-md-40px symbol-light me-5">
 													<div class="symbol-label"
-														style="background-image:url(/theme/infinity/media/app_logo/clash.png)">
+														style="background-image:url(/theme/infinity/media/app_logo/{$an->client}.png)">
 													</div>
 												</div>
 												<div class="d-flex flex-column flex-grow-1 me-2">

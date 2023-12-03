@@ -31,7 +31,7 @@
                                         <div class="card-header align-items-center py-5 gap-2 gap-md-5">
                                             <div class="card-title">
                                                 <div class="fs-3 fw-bolder text-dark">
-												signin record
+												Nhật ký đăng nhập
                                                 </div>
                                             </div>
                                         </div>
@@ -42,8 +42,8 @@
                                                     <tr class="text-start text-gray-400 fw-bold fs-7 text-uppercase gs-0">
                                                         
                                                         <th>IP</th>
-                                                        <th>address</th>
-                                                        <th>date</th>
+                                                        <th>Địa chỉ</th>
+                                                        <th>Ngày</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody class="text-gray-600 fw-semibold"></tbody>
@@ -54,7 +54,7 @@
                                         <div class="card-header align-items-center py-5 gap-2 gap-md-5">
                                             <div class="card-title">
                                                 <div class="fs-3 fw-bolder text-dark">
-												using record
+												Nhật ký sử dụng
                                                 </div>
                                             </div>
                                         </div>
@@ -65,8 +65,8 @@
                                                     <tr class="text-start text-gray-400 fw-bold fs-7 text-uppercase gs-0">
                                                         
                                                         <th>IP</th>
-                                                        <th>address</th>
-                                                        <th>date</th>
+                                                        <th>Địa chỉ</th>
+                                                        <th>Ngày</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody class="text-gray-600 fw-semibold"></tbody>
@@ -77,7 +77,7 @@
                                         <div class="card-header align-items-center py-5 gap-2 gap-md-5">
                                             <div class="card-title">
                                                 <div class="fs-3 fw-bolder text-dark">
-                                                    subscribe record
+                                                    Nhật ký đồng bộ
                                                 </div>
                                             </div>
                                         </div>
@@ -87,8 +87,8 @@
                                                 <thead>
                                                     <tr class="text-start text-gray-400 fw-bold fs-7 text-uppercase gs-0">  
                                                         <th>IP</th>
-                                                        <th>address</th>
-                                                        <th>date</th>
+                                                        <th>Địa chỉ</th>
+                                                        <th>Ngày</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody class="text-gray-600 fw-semibold"></tbody>
@@ -99,7 +99,7 @@
                                         <div class="card-header align-items-center py-5 gap-2 gap-md-5">
                                             <div class="card-title">
                                                 <div class="fs-3 fw-bolder text-dark">
-                                                    traffic record
+                                                    Sử dụng lưu lượng
                                                 </div>
                                             </div>
                                         </div>
@@ -108,9 +108,9 @@
                                             <table class="table align-middle table-striped table-row-bordered text-nowrap gy-5 gs-7" id="zero_traffic_log_table">
                                                 <thead>
                                                     <tr class="text-start text-gray-400 fw-bold fs-7 text-uppercase gs-0">                                                       
-                                                        <th>node name</th>
-                                                        <th>traffic</th>
-                                                        <th>date</th>
+                                                        <th>Máy chủ</th>
+                                                        <th>Lưu lượng</th>
+                                                        <th>Ngày</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody class="text-gray-600 fw-semibold"></tbody>

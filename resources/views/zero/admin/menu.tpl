@@ -261,7 +261,7 @@
 												</svg>
 											</span>
 										</span>
-										<span class="menu-title">Lệnh cấm</span>
+										<span class="menu-title">Quy tắc</span>
 									</a>
 								</div>
 								<div class="menu-item menu-accordion">
