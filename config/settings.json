@@ -572,12 +572,12 @@
     {
         "id": null,
         "item": "withdraw_method",
-        "value": "",
+        "value": "USDT",
         "class": "withdraw",
         "is_public": 1,
         "type": "array",
-        "default": "",
-        "mark": "提现方式"
+        "default": "USDT",
+        "mark": "Phương thức rút tiền"
     },
     {
         "id": null,

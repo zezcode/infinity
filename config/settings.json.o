@@ -7,17 +7,17 @@
         "is_public": "1",
         "type": "string",
         "default": "https://localhost.com",
-        "mark": "网站地址"
+        "mark": "Địa chỉ trang web"
     },
     {
         "id": null,
         "item": "website_name",
-        "value": "ZeroPanel",
+        "value": "InfinityPanel",
         "class": "website",
         "is_public": "1",
         "type": "string",
-        "default": "ZeroPanel",
-        "mark": "网站名称"
+        "default": "InfinityPanel",
+        "mark": "Tên trang web"
     },
     {
         "id": null,
@@ -27,7 +27,7 @@
         "is_public": "0",
         "type": "string",
         "default": "index",
-        "mark": "网站着陆页"
+        "mark": "Trang đích của trang web"
     },
     {
         "id": null,
@@ -37,7 +37,7 @@
         "is_public": "0",
         "type": "string",
         "default": "changethistoken",
-        "mark": "网站安全token"
+        "mark": "TOKEN bảo mật trang web"
     },
     {
         "id": null,
@@ -47,7 +47,7 @@
         "is_public": "0",
         "type": "string",
         "default": "changethistoken",
-        "mark": "网站后端token"
+        "mark": "Token phự trợ"
     },
     {
         "id": null,
@@ -57,7 +57,7 @@
         "is_public": 1,
         "type": "string",
         "default": "",
-        "mark": "登陆页背景图片"
+        "mark": "Hình nền trang đăng nhập"
     },
     {
         "id": null,
@@ -67,7 +67,7 @@
         "is_public": 0,
         "type": "string",
         "default": "",
-        "mark": "smtp发信主机"
+        "mark": "Máy chủ gửi smtp"
     },
     {
         "id": null,
@@ -77,7 +77,7 @@
         "is_public": 0,
         "type": "string",
         "default": "",
-        "mark": "smtp账户名称"
+        "mark": "Tên tài khoản smtp"
     },
     {
         "id": null,
@@ -87,7 +87,7 @@
         "is_public": 0,
         "type": "string",
         "default": "",
-        "mark": "smtp账户密码"
+        "mark": "Mật khẩu smtp"
     },
     {
         "id": null,
@@ -97,7 +97,7 @@
         "is_public": 0,
         "type": "string",
         "default": "",
-        "mark": "smtp发信端口"
+        "mark": "Cổng stmp"
     },
     {
         "id": null,
@@ -107,7 +107,7 @@
         "is_public": 0,
         "type": "string",
         "default": "",
-        "mark": "smtp发信名称"
+        "mark": "Tên gửi smtp"
     },
     {
         "id": null,
@@ -117,7 +117,7 @@
         "is_public": 0,
         "type": "string",
         "default": "",
-        "mark": "smtp发信地址"
+        "mark": "Địa chỉ gửi smtp"
     },
     {
         "id": null,
@@ -127,7 +127,7 @@
         "is_public": 0,
         "type": "bool",
         "default": "1",
-        "mark": "是否使用 TLS\/SSL 发信"
+        "mark": "Sử dụng TLS\/SSL để gửi email"
     },
     {
         "id": null,
@@ -137,7 +137,7 @@
         "is_public": 0,
         "type": "string",
         "default": "none",
-        "mark": "邮件服务提供商"
+        "mark": "Nhà cung cấp dịch vụ thư điện tử"
     },
     {
         "id": null,
@@ -552,11 +552,11 @@
     {
         "id": null,
         "item": "enable_withdraw",
-        "value": "0",
+        "value": "1",
         "class": "withdraw",
         "is_public": 1,
         "type": "bool",
-        "default": "0",
+        "default": "1",
         "mark": "开启佣金提现"
     },
     {
@@ -572,11 +572,11 @@
     {
         "id": null,
         "item": "withdraw_method",
-        "value": "",
+        "value": "USDT",
         "class": "withdraw",
         "is_public": 1,
         "type": "array",
-        "default": "",
+        "default": "USDT",
         "mark": "提现方式"
     },
     {
