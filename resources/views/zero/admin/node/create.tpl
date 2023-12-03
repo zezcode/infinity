@@ -16,9 +16,9 @@
         <meta http-equiv="Cache-Control" content="no-cache, must-revalidate">
         <meta http-equiv="expires" content="0">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700" />
-        <link href="/theme/zero/assets/plugins/custom/datatables/datatables.bundle.css" rel="stylesheet" type="text/css" />
-        <link href="/theme/zero/assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
-        <link href="/theme/zero/assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
+        <link href="/theme/infinity/plugins/custom/datatables/datatables.bundle.css" rel="stylesheet" type="text/css" />
+        <link href="/theme/infinity/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
+        <link href="/theme/infinity/css/style.bundle.css" rel="stylesheet" type="text/css" />
         <link href="https://cdnjs.cloudflare.com/ajax/libs/jsoneditor/9.10.2/jsoneditor.min.css" rel="stylesheet" type="text/css">
         <link href="/favicon.png" rel="shortcut icon">
         <link href="/apple-touch-icon.png" rel="apple-touch-icon">
@@ -56,17 +56,17 @@
                                                     <input class="form-control mb-5" id="traffic_rate" name="traffic_rate" type="text" placeholder="Nhập tỉ lệ tính lưu lượng" value="1">
                                                     <label class="form-label required" for="node_flag">Cờ máy chủ</label>
                                                     <select class="form-select mb-5" id="node_flag">
-                                                        <option value="vietnam" data-kt-select2-country="/theme/zero/assets/media/flags/vn.svg">Việt Nam</option>
-                                                        <option value="singapore" data-kt-select2-country="/theme/zero/assets/media/flags/singapore.svg">Singapore</option>
-                                                        <option value="japan" data-kt-select2-country="/theme/zero/assets/media/flags/japan.svg">Nhật Bản</option>
-                                                        <option value="united-states" data-kt-select2-country="/theme/zero/assets/media/flags/united-states.svg">Hoa Kỳ</option>
-                                                        <option value="united-kingdom" data-kt-select2-country="/theme/zero/assets/media/flags/united-kingdom.svg">Vương Quốc Anh</option>
-                                                        <option value="canada" data-kt-select2-country="/theme/zero/assets/media/flags/canada.svg">Canada</option>
-                                                        <option value="hong-kong" data-kt-select2-country="/theme/zero/assets/media/flags/hong-kong.svg">HongKong</option>                                                
-                                                        <option value="south-korea" data-kt-select2-country="/theme/zero/assets/media/flags/south-korea.svg">Hàn Quốc</option>
-                                                        <option value="australia" data-kt-select2-country="/theme/zero/assets/media/flags/australia.svg">Úc</option>             
-                                                        <option value="brazil" data-kt-select2-country="/theme/zero/assets/media/flags/brazil.svg">Brazil</option>                   
-                                                        <option value="france" data-kt-select2-country="/theme/zero/assets/media/flags/france.svg">Pháp</option>
+                                                        <option value="vietnam" data-kt-select2-country="/theme/infinity/media/flags/vn.svg">Việt Nam</option>
+                                                        <option value="singapore" data-kt-select2-country="/theme/infinity/media/flags/singapore.svg">Singapore</option>
+                                                        <option value="japan" data-kt-select2-country="/theme/infinity/media/flags/japan.svg">Nhật Bản</option>
+                                                        <option value="united-states" data-kt-select2-country="/theme/infinity/media/flags/united-states.svg">Hoa Kỳ</option>
+                                                        <option value="united-kingdom" data-kt-select2-country="/theme/infinity/media/flags/united-kingdom.svg">Vương Quốc Anh</option>
+                                                        <option value="canada" data-kt-select2-country="/theme/infinity/media/flags/canada.svg">Canada</option>
+                                                        <option value="hong-kong" data-kt-select2-country="/theme/infinity/media/flags/hong-kong.svg">HongKong</option>                                                
+                                                        <option value="south-korea" data-kt-select2-country="/theme/infinity/media/flags/south-korea.svg">Hàn Quốc</option>
+                                                        <option value="australia" data-kt-select2-country="/theme/infinity/media/flags/australia.svg">Úc</option>             
+                                                        <option value="brazil" data-kt-select2-country="/theme/infinity/media/flags/brazil.svg">Brazil</option>                   
+                                                        <option value="france" data-kt-select2-country="/theme/infinity/media/flags/france.svg">Pháp</option>
                                                     </select>
                                                     <label class="form-label required" for="node_type">Loại máy chủ</label>
                                                     <select class="form-select mb-5" id="node_type" data-control="select2" data-hide-search="true">

@@ -16,9 +16,9 @@
         <meta http-equiv="Cache-Control" content="no-cache, must-revalidate">
         <meta http-equiv="expires" content="0">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700" />
-        <link href="/theme/zero/assets/plugins/custom/datatables/datatables.bundle.css" rel="stylesheet" type="text/css" />
-        <link href="/theme/zero/assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
-        <link href="/theme/zero/assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
+        <link href="/theme/infinity/plugins/custom/datatables/datatables.bundle.css" rel="stylesheet" type="text/css" />
+        <link href="/theme/infinity/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
+        <link href="/theme/infinity/css/style.bundle.css" rel="stylesheet" type="text/css" />
         <link href="/favicon.png" rel="shortcut icon">
         <link href="/apple-touch-icon.png" rel="apple-touch-icon">
     </head>
@@ -196,7 +196,7 @@
 											<a href="#" class="menu-link px-5">
 												<span class="menu-title position-relative">Language
 												<span class="fs-8 rounded bg-light px-3 py-2 position-absolute translate-middle-y top-50 end-0">English
-												<img class="w-15px h-15px rounded-1 ms-2" src="/theme/zero/assets/media/flags/united-states.svg" alt="" /></span></span>
+												<img class="w-15px h-15px rounded-1 ms-2" src="/theme/infinity/media/flags/united-states.svg" alt="" /></span></span>
 											</a>
 											<!--begin::Menu sub-->
 											<div class="menu-sub menu-sub-dropdown w-175px py-4">
@@ -204,7 +204,7 @@
 												<div class="menu-item px-3">
 													<a href="#" class="menu-link d-flex px-5 active">
 													<span class="symbol symbol-20px me-4">
-														<img class="rounded-1" src="/theme/zero/assets/media/flags/united-states.svg" alt="" />
+														<img class="rounded-1" src="/theme/infinity/media/flags/united-states.svg" alt="" />
 													</span>English</a>
 												</div>
 												<!--end::Menu item-->
@@ -212,7 +212,7 @@
 												<div class="menu-item px-3">
 													<a href="#" class="menu-link d-flex px-5">
 													<span class="symbol symbol-20px me-4">
-														<img class="rounded-1" src="/theme/zero/assets/media/flags/spain.svg" alt="" />
+														<img class="rounded-1" src="/theme/infinity/media/flags/spain.svg" alt="" />
 													</span>Spanish</a>
 												</div>
 												<!--end::Menu item-->
@@ -220,7 +220,7 @@
 												<div class="menu-item px-3">
 													<a href="#" class="menu-link d-flex px-5">
 													<span class="symbol symbol-20px me-4">
-														<img class="rounded-1" src="/theme/zero/assets/media/flags/germany.svg" alt="" />
+														<img class="rounded-1" src="/theme/infinity/media/flags/germany.svg" alt="" />
 													</span>German</a>
 												</div>
 												<!--end::Menu item-->
@@ -228,7 +228,7 @@
 												<div class="menu-item px-3">
 													<a href="#" class="menu-link d-flex px-5">
 													<span class="symbol symbol-20px me-4">
-														<img class="rounded-1" src="/theme/zero/assets/media/flags/japan.svg" alt="" />
+														<img class="rounded-1" src="/theme/infinity/media/flags/japan.svg" alt="" />
 													</span>Japanese</a>
 												</div>
 												<!--end::Menu item-->
@@ -236,7 +236,7 @@
 												<div class="menu-item px-3">
 													<a href="#" class="menu-link d-flex px-5">
 													<span class="symbol symbol-20px me-4">
-														<img class="rounded-1" src="/theme/zero/assets/media/flags/france.svg" alt="" />
+														<img class="rounded-1" src="/theme/infinity/media/flags/france.svg" alt="" />
 													</span>French</a>
 												</div>
 												<!--end::Menu item-->

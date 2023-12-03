@@ -21,11 +21,11 @@
                                                                     </select>
                                                                     <label class="form-label" for="currency_unit">Đơn vị tiền tệ</label>
                                                                     <select class="form-select mb-5" id="currency_unit">
-                                                                        <option value="VND" data-kt-select2-country="/theme/zero/assets/media/flags/vn.svg">VND</option>
-                                                                        <option value="USD" data-kt-select2-country="/theme/zero/assets/media/flags/united-states.svg">USD</option>
-                                                                        <option value="JPY" data-kt-select2-country="/theme/zero/assets/media/flags/japan.svg">JPY</option>
-                                                                        <option value="SGD" data-kt-select2-country="/theme/zero/assets/media/flags/singapore.svg">SGD</option>
-                                                                        <option value="EUR" data-kt-select2-country="/theme/zero/assets/media/flags/european-union.svg">EUR</option>
+                                                                        <option value="VND" data-kt-select2-country="/theme/infinity/media/flags/vn.svg">VND</option>
+                                                                        <option value="USD" data-kt-select2-country="/theme/infinity/media/flags/united-states.svg">USD</option>
+                                                                        <option value="JPY" data-kt-select2-country="/theme/infinity/media/flags/japan.svg">JPY</option>
+                                                                        <option value="SGD" data-kt-select2-country="/theme/infinity/media/flags/singapore.svg">SGD</option>
+                                                                        <option value="EUR" data-kt-select2-country="/theme/infinity/media/flags/european-union.svg">EUR</option>
                                                                     </select>
                                                                     <label class="form-label" for="currency_exchange_rate">Tỉ lệ quy đổi</label>
                                                                     <input class="form-control mb-5" id="currency_exchange_rate" value="{$settings['currency_exchange_rate']}" type="text" placeholder="Tỷ lệ quy đổi" />
@@ -52,7 +52,7 @@
                                                                     </select>
                                                                     <label class="form-label" for="withdraw_method">Phương thức rút tiền</label>
                                                                     <select class="form-select mb-5" id="withdraw_method">
-                                                                        <option value="USDT" data-kt-select2-image="/theme/zero/assets/media/payment_logo/tether.svg">USDT</option>
+                                                                        <option value="USDT" data-kt-select2-image="/theme/infinity/media/payment_logo/tether.svg">USDT</option>
                                                                     </select>
                                                                     <label class="form-label" for="withdraw_minimum_amount">Số tiền rút tối thiểu</label>
                                                                     <input class="form-control mb-5" id="withdraw_minimum_amount" value="{$settings['withdraw_minimum_amount']}" type="number" placeholder="Số tiền rút tối thiểu" />

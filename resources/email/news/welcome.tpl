@@ -27,7 +27,7 @@
 												<!--end:Logo-->
 												<!--begin:Media-->
 												<div style="margin-bottom: 15px">
-													<img src="{$config['website_name']}/theme/zero/assets/media/email/icon-positive-vote-1.svg" />
+													<img src="{$config['website_name']}/theme/infinity/media/email/icon-positive-vote-1.svg" />
 												</div>
 												<!--end:Media-->
 												<!--begin:Text-->
@@ -54,7 +54,7 @@
 												<div style="display:flex">
 													<!--begin::Media-->
 													<div style="display: flex; justify-content: center; align-items: center; width:40px; height:40px; margin-right:13px">
-														<img  src="{$config['website_name']}/theme/zero/assets/media/email/icon-polygon.svg" />
+														<img  src="{$config['website_name']}/theme/infinity/media/email/icon-polygon.svg" />
 														<span style="position: absolute; color:#50CD89; font-size: 16px; font-weight: 600;">1</span>
 													</div>
 													<!--end::Media-->
@@ -81,7 +81,7 @@
 												<div style="display:flex">
 													<!--begin::Media-->
 													<div style="display: flex; justify-content: center; align-items: center; width:40px; height:40px; margin-right:13px">
-														<img src="{$config['website_name']}/theme/zero/assets/media/email/icon-polygon.svg" />
+														<img src="{$config['website_name']}/theme/infinity/media/email/icon-polygon.svg" />
 														<span style="position: absolute; color:#50CD89; font-size: 16px; font-weight: 600;">2</span>
 													</div>
 													<!--end::Media-->
@@ -108,7 +108,7 @@
 												<div style="display:flex">
 													<!--begin::Media-->
 													<div style="display: flex; justify-content: center; align-items: center; width:40px; height:40px; margin-right:13px">
-														<img src="{$config['website_name']}/theme/zero/assets/media/email/icon-polygon.svg" />
+														<img src="{$config['website_name']}/theme/infinity/media/email/icon-polygon.svg" />
 														<span style="position: absolute; color:#50CD89; font-size: 16px; font-weight: 600;">3</span>
 													</div>
 													<!--end::Media-->
@@ -144,16 +144,16 @@
 									<tr>
 										<td align="center" valign="center" style="text-align:center; padding-bottom: 20px;">
 											<a href="#" style="margin-right:10px">
-												<img  src="{$config['website_name']}/theme/zero/assets/media/email/icon-linkedin.svg" />
+												<img  src="{$config['website_name']}/theme/infinity/media/email/icon-linkedin.svg" />
 											</a>
 											<a href="#" style="margin-right:10px">
-												<img  src="{$config['website_name']}/theme/zero/assets/media/email/icon-dribbble.svg" />
+												<img  src="{$config['website_name']}/theme/infinity/media/email/icon-dribbble.svg" />
 											</a>
 											<a href="#" style="margin-right:10px">
-												<img  src="{$config['website_name']}/theme/zero/assets/media/email/icon-facebook.svg" />
+												<img  src="{$config['website_name']}/theme/infinity/media/email/icon-facebook.svg" />
 											</a>
 											<a href="#">
-												<img  src="{$config['website_name']}/theme/zero/assets/media/email/icon-twitter.svg" />
+												<img  src="{$config['website_name']}/theme/infinity/media/email/icon-twitter.svg" />
 											</a>
 										</td>
 									</tr>
@@ -167,8 +167,8 @@
 							</table>
 						</div>
 					</div>
-        <script src="{$config['website_name']}/theme/zero/assets/plugins/global/plugins.bundle.js"></script>
-		<script src="{$config['website_name']}/theme/zero/assets/js/scripts.bundle.js"></script>
+        <script src="{$config['website_name']}/theme/infinity/plugins/global/plugins.bundle.js"></script>
+		<script src="{$config['website_name']}/theme/infinity/js/scripts.bundle.js"></script>
 	</body>
 	<!--end::Body-->
 </html>

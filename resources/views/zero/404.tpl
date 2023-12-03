@@ -8,8 +8,8 @@
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700" />
 		
 		
-		<link href="/theme/zero/assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
-		<link href="/theme/zero/assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
+		<link href="/theme/infinity/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
+		<link href="/theme/infinity/css/style.bundle.css" rel="stylesheet" type="text/css" />
 		
 	</head>
 	
@@ -38,8 +38,8 @@
 							
 							
 							<div class="mb-3">
-								<img src="/theme/zero/assets/media/auth/404-error.png" class="mw-100 mh-300px theme-light-show" alt="" />
-								<img src="/theme/zero/assets/media/auth/404-error-dark.png" class="mw-100 mh-300px theme-dark-show" alt="" />
+								<img src="/theme/infinity/media/auth/404-error.png" class="mw-100 mh-300px theme-light-show" alt="" />
+								<img src="/theme/infinity/media/auth/404-error-dark.png" class="mw-100 mh-300px theme-dark-show" alt="" />
 							</div>
 							
 							
@@ -59,8 +59,8 @@
 		
 		<script>var hostUrl = "assets/";</script>
 		
-		<script src="/theme/zero/assets/plugins/global/plugins.bundle.js"></script>
-		<script src="/theme/zero/assets/js/scripts.bundle.js"></script>
+		<script src="/theme/infinity/plugins/global/plugins.bundle.js"></script>
+		<script src="/theme/infinity/js/scripts.bundle.js"></script>
 		
 		
 	</body>

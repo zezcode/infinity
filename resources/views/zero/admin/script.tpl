@@ -1,6 +1,6 @@
-<script src="/theme/zero/assets/plugins/global/plugins.bundle.js"></script>
-<script src="/theme/zero/assets/js/scripts.bundle.js"></script>
-<script src="/theme/zero/assets/plugins/custom/datatables/datatables.bundle.js"></script>
+<script src="/theme/infinity/plugins/global/plugins.bundle.js"></script>
+<script src="/theme/infinity/js/scripts.bundle.js"></script>
+<script src="/theme/infinity/plugins/custom/datatables/datatables.bundle.js"></script>
 <script>
     // get result 
 function getResult(titles, texts, icons) {

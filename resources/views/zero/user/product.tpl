@@ -16,9 +16,9 @@
         <meta http-equiv="Cache-Control" content="no-cache, must-revalidate">
         <meta http-equiv="expires" content="0">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700" />
-        <link href="/theme/zero/assets/plugins/custom/datatables/datatables.bundle.css" rel="stylesheet" type="text/css" />
-        <link href="/theme/zero/assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
-        <link href="/theme/zero/assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
+        <link href="/theme/infinity/plugins/custom/datatables/datatables.bundle.css" rel="stylesheet" type="text/css" />
+        <link href="/theme/infinity/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
+        <link href="/theme/infinity/css/style.bundle.css" rel="stylesheet" type="text/css" />
         <link href="/favicon.png" rel="shortcut icon">
     </head>
     {include file ='include/index/menu.tpl'}               
