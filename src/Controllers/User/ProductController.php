@@ -24,22 +24,22 @@ final class ProductController extends BaseController
         $product_tab_lists = [
             [
                 'type' => 1,
-                'name' => $trans->t('cycle'),
+                'name' => 'Chu kỳ',
             ],
             [
                 'type' => 2,
-                'name' => 'traffic',
+                'name' => 'Lưu lượng',
             ],
             [
                 'type' => 3,
-                'name' => $trans->t('other'),
+                'name' => 'Dài hạn',
             ],
         ];
 
         $product_lists = [
-            1 => $trans->t('cycle'),
-            2 => $trans->t('traffic'),
-            3 => $trans->t('other'),
+            1 => 'Chu kỳ',
+            2 => 'Lưu lượng',
+            3 => 'Dài hạn',
         ];
         $all_products = Product::where('status', '1')->get();
         $count = [

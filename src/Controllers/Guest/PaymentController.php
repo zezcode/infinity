@@ -43,7 +43,7 @@ class PaymentController
             OrderController::execute($no);
             if (Setting::obtain('enable_push_top_up_message')) {
                 $messageText = sprintf(
-                    "💰成功收款%s%s\n———————————————\n订单号：%s",
+                    "💰Đã nhận thanh toán%s%s\n———————————————\nSố thứ tự：%s",
                     $order->order_total,
                     Setting::obtain('currency_unit'),
                     $order->order_no

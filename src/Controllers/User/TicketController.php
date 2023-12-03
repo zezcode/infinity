@@ -31,7 +31,7 @@ class TicketController extends UserController
         if ($title === '' || $comment === '') {
             return $response->withJson([
                 'ret' => 0,
-                'msg' => '非法输入',
+                'msg' => 'Không hợp lệ',
             ]);
         }
 
@@ -59,7 +59,7 @@ class TicketController extends UserController
         if (Setting::obtain('enable_push_ticket_message')) {
             $converter = new HtmlConverter();
             $messageText = sprintf(
-                "有工单需要处理 #%s\n———————————————\n用户ID:%s\n工单类型:%s\n工单内容:%s",
+                "Phiếu cần xử lý #%s\n———————————————\USER ID:%s\nLoại phiếu%s\nNội dung:%s",
                 $ticket->id,
                 $ticket->userid,
                 $ticket->type,
@@ -68,7 +68,7 @@ class TicketController extends UserController
             $keyBoard = [
                 [
                     [
-                        'text' => '回复工单 #',
+                        'text' => 'Trả lời phiếu #',
                         'url' => Setting::obtain('website_url') . '/' . Setting::obtain('website_admin_path') . '/ticket/view/' . $ticket->id  
                     ]
                 ]
@@ -93,7 +93,7 @@ class TicketController extends UserController
         if ($comment === '') {
             return $response->withJson([
                 'ret' => 0,
-                'msg' => '非法输入',
+                'msg' => 'Không hợp lệ',
             ]);
         }
 
@@ -122,7 +122,7 @@ class TicketController extends UserController
         if (Setting::obtain('enable_push_ticket_message')) {
             $converter = new HtmlConverter();
             $messageText = sprintf(
-                "有工单需要处理 #%s\n———————————————\n用户ID:%s\n工单类型:%s\n工单内容:%s",
+                "Phiếu cần xử lý #%s\n———————————————\USER ID:%s\nLoại phiếu%s\nNội dung:%s",
                 $ticket->id,
                 $ticket->userid,
                 $ticket->type,
@@ -131,7 +131,7 @@ class TicketController extends UserController
             $keyBoard = [
                 [
                     [
-                        'text' => '回复工单 #' . $id,
+                        'text' => 'Trả lời phiếu #' . $id,
                         'url' => Setting::obtain('website_url') . '/' . Setting::obtain('website_admin_path') . '/ticket/view/' . $id 
                     ]
                 ]
