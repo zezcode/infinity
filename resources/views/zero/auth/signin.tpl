@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="vi">
 	<head>
-		<title>{$config['website_name']} - signin</title>
+		<title>{$config['website_name']} - Đăng nhập</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />		
 		<link rel="shortcut icon" href="/favicon.png" />
@@ -24,7 +24,7 @@
 						<div class="card-body p-10 p-lg-20">							
 							<form class="form w-100" novalidate="novalidate" id="kt_sign_in_form" data-kt-redirect-url="/user/dashboard" action="#">								
 								<div class="text-center mb-11">
-									<h1 class="text-dark fw-bolder mb-6">signin</h1>
+									<h1 class="text-dark fw-bolder mb-6">Đăng nhập</h1>
 								</div>
 								<div class="fv-row mb-8">
 									<input type="text" placeholder="email" name="email" autocomplete="off" id="signin-email" data-kt-translate="sign-in-input-email" class="form-control form-control-lg bg-transparent" />
@@ -39,17 +39,17 @@
 								{/if}
 								<div class="d-grid mb-10">
 									<button id="kt_sign_in_submit" class="btn btn-primary">
-										<span class="indicator-label" data-kt-translate="sign-in-submit">signin</span>
+										<span class="indicator-label" data-kt-translate="sign-in-submit">Đăng nhập</span>
 										<span class="indicator-progress">
-											<span data-kt-translate="general-progress">please wait</span>
+											<span data-kt-translate="general-progress">Vui lòng chờ</span>
 											<span class="spinner-border spinner-border-sm align-middle ms-2"></span>
 										</span>
 									</button>									
 								</div>
 								<div class="text-gray-500 text-center fw-semibold fs-6">
-									<span><a class="link-primary" href="/auth/signup">signup</a></span>
+									<span><a class="link-primary" href="/auth/signup">Đăng ký</a></span>
 									|
-									<span><a href="/password/reset" class="link-primary" data-kt-translate="sign-in-forgot-password">forgot passwd</a></span>
+									<span><a href="/password/reset" class="link-primary" data-kt-translate="sign-in-forgot-password">Quên mật khẩu</a></span>
 								</div>
 							</form>
 						</div>

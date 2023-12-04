@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="vi">
 	<head>
-		<title>{$config['website_name']} - signup</title>
+		<title>{$config['website_name']} - Đăng ký</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700" />
@@ -24,15 +24,15 @@
 						<div class="card-body p-10 p-lg-20">
 							<form class="form w-100" novalidate="novalidate" id="kt_sign_up_form" data-kt-redirect-url="/user/dashboard" action="#">
 								<div class="text-center mb-11">
-									<h1 class="text-dark fw-bolder mb-6">signup</h1>
+									<h1 class="text-dark fw-bolder mb-6">Đăng ký</h1>
 								</div>
 								<div class="fv-row mb-5">
-									<input class="form-control form-control-lg bg-transparent" type="email" placeholder="email" name="email" id="email" autocomplete="off" />
+									<input class="form-control form-control-lg bg-transparent" type="email" placeholder="Email" name="email" id="email" autocomplete="off" />
 								</div>
 
 								<div class="fv-row mb-5" data-kt-password-meter="true">
 									<div class="position-relative mb-3">		
-										<input class="form-control form-control-lg bg-transparent" type="password" placeholder="passwd" name="password" id="passwd" autocomplete="off" />
+										<input class="form-control form-control-lg bg-transparent" type="password" placeholder="Mật khẩu" name="password" id="passwd" autocomplete="off" />
 										<span class="btn btn-sm btn-icon position-absolute translate-middle top-50 end-0 me-n2" data-kt-password-meter-control="visibility">
 											<i class="bi bi-eye-slash fs-2"></i>
 											<i class="bi bi-eye fs-2 d-none"></i>
@@ -47,11 +47,11 @@
 								</div>
 
 								<div class="fv-row mb-5">
-									<input class="form-control form-control-lg bg-transparent" type="password" placeholder="comfirm passwd" name="confirm-password" id="repasswd" autocomplete="off" data-kt-translate="sign-up-input-confirm-password" />
+									<input class="form-control form-control-lg bg-transparent" type="password" placeholder="Nhập lại mật khẩu" name="confirm-password" id="repasswd" autocomplete="off" data-kt-translate="sign-up-input-confirm-password" />
 								</div>
 
                                 <div class="fv-row mb-5">
-                                    <input class="form-control form-control-lg bg-transparent" type="text" placeholder="referral code" name="code" id="referral_code" autocomplete="off" data-kt-translate="sign-up-input-last-name" />
+                                    <input class="form-control form-control-lg bg-transparent" type="text" placeholder="Mã giới thiệu" name="code" id="referral_code" autocomplete="off" data-kt-translate="sign-up-input-last-name" />
                                 </div>
 								{if $config['enable_signup_captcha'] == true && $config['captcha_provider'] == 'turnstile' && $captcha['turnstile_sitekey'] != ''}
 									<div class="fv-row mb-7">
@@ -60,16 +60,16 @@
 								{/if}
 								<div class="d-grid mb-10">
 									<button id="kt_sign_up_submit" class="btn btn-primary">
-										<span class="indicator-label" data-kt-translate="sign-up-submit">signup</span>
+										<span class="indicator-label" data-kt-translate="sign-up-submit">Đăng ký</span>
                                         <span class="indicator-progress">
-                                            <span data-kt-translate="general-progress">please wait</span>
+                                            <span data-kt-translate="general-progress">Vui lòng chờ</span>
                                             <span class="spinner-border spinner-border-sm align-middle ms-2"></span>
                                         </span>
 									</button>
 								</div>
 								<div class="text-gray-500 text-center fw-semibold fs-6">
-										already have account?
-									<a class="link-primary" href="/auth/signin">signin</a>
+										Đã có tài khoản?
+									<a class="link-primary" href="/auth/signin"> Đăng nhập</a>
 								</div>
 							</form>
 						</div>

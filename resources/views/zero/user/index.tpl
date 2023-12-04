@@ -53,6 +53,22 @@
 												d="M7.5 3a.5.5 0 0 1 .5.5v5.21l3.248 1.856a.5.5 0 0 1-.496.868l-3.5-2A.5.5 0 0 1 7 9V3.5a.5.5 0 0 1 .5-.5z" />
 										</svg>
 									</span>
+									<!--<div class="d-flex flex-column flex-grow-1 mr-2">
+										<a class="fs-lg fw-bolder text-gray-800 mb-1">
+										{if $user->class == 0}
+											<span class="counter">Hạn sử dụng:&nbsp;Chưa mua gói</span>
+										{elseif $user->product_id != 1}
+											<span class="counter">Hạn sử dụng:&nbsp;<span id="user_class_expired_time"></span></span>
+										{elseif $user->product_id == 1}
+											<span class="counter">Hạn sử dụng:&nbsp;Vĩnh viễn</span>
+										{/if}
+										</a>
+										<span class="text-muted fw-semibold d-block">
+											{if $user->class >= 1}
+												Ngày hết hạn:&nbsp;{substr($user->class_expire, 0, 10)}
+											{/if}
+										</span>
+									</div> -->
 									<div class="d-flex flex-column flex-grow-1 mr-2">
 										<a class="fs-lg fw-bolder text-gray-800 mb-1">
 											{if $user->class >= 1}

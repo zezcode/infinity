@@ -32,7 +32,7 @@
 											<div class="card card-flush mb-9">
 												<div class="card-body">
 													<p class="text-gray-800 text-center fs-2hx fw-bolder">{$referred_user}</p>
-													<p class="text-gray-400 text-center">registered user</p>
+													<p class="text-gray-400 text-center">Số người dùng đã đăng kí</p>
 												</div>
 											</div>
 										</div>
@@ -40,7 +40,7 @@
 											<div class="card card-flush mb-9">
 												<div class="card-body">
 													<p class="text-gray-800 text-center fs-2hx fw-bolder">{$config['rebate_ratio']}%</p>
-													<p class="text-gray-400 text-center">commission ratio</p>
+													<p class="text-gray-400 text-center">Phần trăm hoa hồng được hưởng</p>
 												</div>
 											</div>
 										</div>
@@ -49,7 +49,7 @@
 										<div class="card-header align-items-center py-5 gap-2 gap-md-5">
 											<div class="card-title">
 												<div class="fs-3 fw-bolder text-dark">
-													commission record
+													Nhật ký nhận hoa hồng
 												</div>
 											</div>
 										</div>
@@ -57,9 +57,9 @@
 											<table class="table align-middle table-striped table-row-bordered text-nowrap gy-5 gs-7" id="zero_user_get_commission_log_table">
 												<thead>
 													<tr class="text-start text-gray-400 fw-bold fs-7 text-uppercase gs-0">
-														<th>total</th>
-														<th>commission</th>
-														<th>date</th>
+														<th>Tổng cộng</th>
+														<th>Hoa hồng</th>
+														<th>Ngày</th>
 													</tr>
 												</thead>
 												<tbody class="text-gray-600 fw-semibold"></tbody>

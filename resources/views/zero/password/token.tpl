@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="vi">
 	<head>
-		<title>{$config['website_name']} Reset Passwrod</title>
+		<title>{$config['website_name']} Đặt lại mật khẩu</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700" />
@@ -24,9 +24,9 @@
 						<div class="card-body p-10 p-lg-20">
 							<form class="form w-100" novalidate="novalidate" id="kt_new_password_form" data-kt-redirect-url="/auth/signin" action="#">
 								<div class="text-center mb-10">
-									<h1 class="text-dark fw-bolder mb-3">Setting New Password</h1>
-									<div class="text-gray-500 fw-semibold fs-6">Password has been reset?
-									<a href="/auth/signin" class="link-primary fw-bold">Sign In</a></div>
+									<h1 class="text-dark fw-bolder mb-3">Đặt mật khẩu mới</h1>
+									<div class="text-gray-500 fw-semibold fs-6">Mật khẩu đã được đặt lại?
+									<a href="/auth/signin" class="link-primary fw-bold"> Đăng nhập</a></div>
 								</div>
 								<div class="fv-row mb-8" data-kt-password-meter="true">
 									<div class="mb-1">
@@ -50,8 +50,8 @@
 								</div>
 								<div class="d-grid mb-10">
 									<button type="button" id="kt_new_password_submit" class="btn btn-primary">
-										<span class="indicator-label">Submit</span>
-										<span class="indicator-progress">Please Wating...
+										<span class="indicator-label">Xác nhận</span>
+										<span class="indicator-progress">Vui lòng chờ
 										<span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
 									</button>
 								</div>

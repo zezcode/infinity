@@ -8,15 +8,15 @@ i18next.use(i18nextBrowserLanguageDetector).init({
     resources: {
         en: {
           translation: {
-            'copy success': 'Copy Success',
-            'monthly fee': 'Monthly Fee',
-            'quarterly fee': 'Quarterly Fee',
-            'semi annua fee': 'Semi-annua Fee',
-            'annual fee': 'Annua Fee',
-            'biennial fee': 'Biennial Fee',
-            'onetime fee': 'Onetime Fee',
+            'copy success': 'Sao chép thành công',
+            'monthly fee': 'Giá 1 tháng',
+            'quarterly fee': 'Giá 3 tháng',
+            'semi annua fee': 'Giá 6 tháng',
+            'annual fee': 'Giá 1 năm',
+            'biennial fee': 'Giá 2 năm',
+            'onetime fee': 'Dài hạn',
             'insufficient permissions': 'Insufficient permissions',
-            'confirm importing subscription link': 'Confirm importing subscription link?',
+            'confirm importing subscription link': 'Xác nhận đồng bộ máy chủ vào app',
             'the value is not a valid email address': 'The value is not a valid email address',
             'email address is required': 'Email address is required',
             'password is required': 'Password is required',
@@ -24,11 +24,11 @@ i18next.use(i18nextBrowserLanguageDetector).init({
             'please enter valid password': 'Please enter valid password',
             'password confirmation is required': 'Password confirmation is required',
             'password and its confirm are not the same': 'Password and its confirm are not the same',
-            'day': 'Day',
-            'minute': 'Minute',
-            'hour': 'Hour',
-            'second': "Second",
-            'language': "Language"
+            'day': 'Ngày',
+            'minute': 'Phút',
+            'hour': 'Giờ',
+            'second': "Giây",
+            'language': "Ngôn ngữ"
           }
         },
         zh: {
@@ -41,7 +41,7 @@ i18next.use(i18nextBrowserLanguageDetector).init({
             'biennial fee': '两年付',
             'onetime fee': '一次性付',
             'insufficient permissions': 'Không có quyền làm việc này',
-            'confirm importing subscription link': '确定导入订阅链接？',
+            'confirm importing subscription link': 'Xác nhận đồng bộ máy chủ vào app',
             'the value is not a valid email address': '该值不是有效的电子邮件地址',
             'email address is required': '电子邮件地址不能为空',
             'password is required': '密码不能为空',

@@ -223,7 +223,7 @@
                                                     </svg>
                                                 </span>
                                             </span>
-                                            <span class="menu-title">Hệ thống máy chủ</span>
+                                            <span class="menu-title">Máy chủ</span>
                                         </a>
                                     </div>
                                     <div class="menu-item menu-accordion">
@@ -251,7 +251,7 @@
                                                     </svg>
                                                 </span>
                                             </span>
-                                            <span class="menu-title">Thông tin người dùng</span>
+                                            <span class="menu-title">Tài khoản</span>
                                         </a>
                                     </div>
                                     

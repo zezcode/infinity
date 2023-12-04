@@ -31,7 +31,7 @@
 						<div class="card-body py-15 py-lg-20">
 							<h1 class="fw-bolder text-gray-900 mb-5">{if $verification_result == 'true'}Success, Good job guys! {else} Failed, It's terrible{/if}</h1>
 							<div class="mb-11">
-								<a href="/user/dashboard" class="btn btn-sm btn-primary fw-bold">Back Dashboard</a>
+								<a href="/user/dashboard" class="btn btn-sm btn-primary fw-bold">Về trang chủ</a>
 							</div>
 							<div class="mb-0">
 								<img src="/theme/infinity/media/auth/please-verify-your-email.png" class="mw-100 mh-300px theme-light-show" alt="" />

@@ -68,11 +68,11 @@
                                                             
                                                             <td class="text-end">
                                                                 {if $order->order_status == '1'}
-                                                                <span class="badge badge-warning fs-6 fw-bold">pending</span>
+                                                                <span class="badge badge-warning fs-6 fw-bold">Đang chờ</span>
                                                                 {else if $order->order_status == '2'}
-                                                                <span class="badge badge-success fs-6 fw-bold">paid</span>
+                                                                <span class="badge badge-success fs-6 fw-bold">Đã thanh toán</span>
 																{else if $order->order_status == '0'}
-																<span class="badge badge-danger fs-6 fw-bold">invalid</span>	
+																<span class="badge badge-danger fs-6 fw-bold">Đã hủy</span>	
                                                                 {/if}   
                                                             </td>
 															<td class="text-end">{$order->payment()}</td>
