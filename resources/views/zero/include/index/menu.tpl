@@ -107,7 +107,7 @@
                                     </div>
                                 </div>
                                 <!--
-                                <div class="app-navbar-item ms-1 ms-lg-3">
+                                <!--<div class="app-navbar-item ms-1 ms-lg-3">
                                     <a type="button" class="btn btn-icon btn-active-light-primary w-35px h-35px w-md-40px h-md-40px" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">                                
                                         <i class="bi bi-translate fs-2"></i>
                                     </a>
