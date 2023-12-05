@@ -140,8 +140,8 @@
                                                 {/if}
                                                 <div class="text-center pt-15">
                                                     <button class="btn btn-primary" type="submit" data-kt-users-action="submit" onclick="KTUsersPayOrder('{$order->order_no}')">
-                                                        <span class="indicator-label">{$trans->t('submit')}</span>
-                                                        <span class="indicator-progress">{$trans->t('please wait')}
+                                                        <span class="indicator-label">Xác nhận</span>
+                                                        <span class="indicator-progress">Vui lòng chờ
                                                         <span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
                                                     </button>
                                                 </div>
