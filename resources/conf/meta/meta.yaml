@@ -42,8 +42,8 @@ proxy-groups:
     name: "Proxy"
     type: select
     proxies: 
-      - "Auto"
-      - "故障转移"
+      - "Tự chọn"
+      - "Auto đổi máy chủ"
   - 
     name: "Google"
     type: select
@@ -70,20 +70,20 @@ proxy-groups:
     proxies: 
       - "Proxy"
   - 
-    name: "Auto"
+    name: "Tự chọn"
     type: url-test
     proxies: []
     url: "http://www.gstatic.com/generate_204"
     interval: 86400
   - 
-    name: "故障转移"
+    name: "Auto đổi máy chủ"
     type: fallback
     proxies: []
     url: "http://www.gstatic.com/generate_204"
     interval: 7200
 
 rules:
-  - AND,(AND,(DST-PORT,443),(NETWORK,UDP)),(GEOSITE,geolocation-!cn),REJECT # 屏蔽quic
+  - AND,(AND,(DST-PORT,443),(NETWORK,UDP)),(GEOSITE,geolocation-!cn),REJECT 
 
   - GEOSITE,category-ads-all,REJECT
   - GEOSITE,geolocation-cn,DIRECT
