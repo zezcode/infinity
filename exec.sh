@@ -10,7 +10,7 @@ read -p "Nhập tên user database: " dbuser
 read -p "Nhập mật khẩu database: " dbpass
 echo
 
-mysql -u $dbuser -p$dbpass $dbname < ./sql/zero.sql
+mysql -u $dbuser -p$dbpass $dbname < ./sql/infinity.sql
 
 cp ./config/.config.php.o ./config/.config.php
 cp ./config/settings.json.o ./config/settings.json
