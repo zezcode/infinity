@@ -2,10 +2,10 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- 主机： localhost
--- 生成日期： 2023-08-18 19:44:21
--- 服务器版本： 11.0.2-MariaDB
--- PHP 版本： 8.2.9
+-- Máy chủ: localhost
+-- Thời gian đã tạo: Th12 13, 2023 lúc 06:10 PM
+-- Phiên bản máy phục vụ: 10.7.3-MariaDB-log
+-- Phiên bản PHP: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,40 +18,40 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- 数据库： `zero`
+-- Cơ sở dữ liệu: `zero`
 --
 
 -- --------------------------------------------------------
 
 --
--- 表的结构 `alive_ip`
+-- Cấu trúc bảng cho bảng `alive_ip`
 --
 
 CREATE TABLE `alive_ip` (
   `id` bigint(20) NOT NULL,
   `nodeid` int(11) NOT NULL,
   `userid` int(11) NOT NULL,
-  `ip` varchar(39) NOT NULL,
+  `ip` varchar(39) COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
 --
--- 表的结构 `announcement`
+-- Cấu trúc bảng cho bảng `announcement`
 --
 
 CREATE TABLE `announcement` (
   `id` int(11) NOT NULL,
   `created_at` int(11) NOT NULL,
   `updated_at` int(11) NOT NULL,
-  `content` longtext NOT NULL
+  `content` longtext COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
 --
--- 表的结构 `commission`
+-- Cấu trúc bảng cho bảng `commission`
 --
 
 CREATE TABLE `commission` (
@@ -59,7 +59,7 @@ CREATE TABLE `commission` (
   `order_amount` decimal(12,2) NOT NULL COMMENT '订单金额',
   `userid` int(11) NOT NULL,
   `invite_userid` int(11) NOT NULL,
-  `order_no` varchar(30) NOT NULL COMMENT '订单号',
+  `order_no` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '订单号',
   `get_amount` decimal(12,2) NOT NULL COMMENT '获得佣金',
   `created_at` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -67,7 +67,7 @@ CREATE TABLE `commission` (
 -- --------------------------------------------------------
 
 --
--- 表的结构 `config`
+-- Cấu trúc bảng cho bảng `config`
 --
 
 CREATE TABLE `config` (
@@ -79,21 +79,21 @@ CREATE TABLE `config` (
   `type` text NOT NULL COMMENT '值类型',
   `default` text NOT NULL COMMENT '默认值',
   `mark` text NOT NULL COMMENT '备注'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
 --
--- 表的结构 `coupon`
+-- Cấu trúc bảng cho bảng `coupon`
 --
 
 CREATE TABLE `coupon` (
   `id` int(11) NOT NULL,
-  `code` varchar(20) NOT NULL COMMENT '优惠码',
+  `code` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '优惠码',
   `per_use_count` int(11) DEFAULT NULL COMMENT '每个用户使用次数',
   `expired_at` int(11) NOT NULL COMMENT '到期时间',
-  `limited_product` varchar(20) DEFAULT NULL COMMENT '限定产品使用',
-  `limited_product_period` varchar(20) DEFAULT NULL COMMENT '限制产品周期',
+  `limited_product` varchar(20) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT '限定产品使用',
+  `limited_product_period` varchar(20) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT '限制产品周期',
   `discount` int(11) NOT NULL COMMENT '折扣比例',
   `total_use_count` int(11) DEFAULT NULL COMMENT '总使用次数',
   `total_used_count` int(11) NOT NULL DEFAULT 0 COMMENT '被使用的次数',
@@ -104,13 +104,13 @@ CREATE TABLE `coupon` (
 -- --------------------------------------------------------
 
 --
--- 表的结构 `detect_ban_log`
+-- Cấu trúc bảng cho bảng `detect_ban_log`
 --
 
 CREATE TABLE `detect_ban_log` (
   `id` int(11) UNSIGNED NOT NULL,
   `user_id` int(10) UNSIGNED NOT NULL COMMENT '用户 ID',
-  `email` varchar(32) NOT NULL COMMENT '用户邮箱',
+  `email` varchar(32) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '用户邮箱',
   `detect_number` int(11) NOT NULL COMMENT '本次违规次数',
   `ban_time` int(11) NOT NULL COMMENT '本次封禁时长',
   `start_time` int(11) NOT NULL COMMENT '统计开始时间',
@@ -121,21 +121,21 @@ CREATE TABLE `detect_ban_log` (
 -- --------------------------------------------------------
 
 --
--- 表的结构 `detect_list`
+-- Cấu trúc bảng cho bảng `detect_list`
 --
 
 CREATE TABLE `detect_list` (
   `id` int(11) NOT NULL,
-  `name` longtext NOT NULL,
-  `text` longtext NOT NULL,
-  `regex` longtext NOT NULL,
+  `name` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `text` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `regex` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
   `type` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
 --
--- 表的结构 `detect_log`
+-- Cấu trúc bảng cho bảng `detect_log`
 --
 
 CREATE TABLE `detect_log` (
@@ -150,30 +150,30 @@ CREATE TABLE `detect_log` (
 -- --------------------------------------------------------
 
 --
--- 表的结构 `email_queue`
+-- Cấu trúc bảng cho bảng `email_queue`
 --
 
 CREATE TABLE `email_queue` (
   `id` int(11) NOT NULL,
-  `to_email` varchar(32) NOT NULL,
-  `subject` longtext NOT NULL,
-  `template` longtext NOT NULL,
-  `array` longtext NOT NULL,
+  `to_email` varchar(32) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `subject` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `template` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `array` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='Email Queue 發件列表';
 
 -- --------------------------------------------------------
 
 --
--- 表的结构 `knowledge`
+-- Cấu trúc bảng cho bảng `knowledge`
 --
 
 CREATE TABLE `knowledge` (
   `id` int(11) NOT NULL,
-  `platform` varchar(20) NOT NULL COMMENT '平台',
-  `client` varchar(20) NOT NULL COMMENT '分类',
-  `title` varchar(20) NOT NULL COMMENT '标题',
-  `content` longtext NOT NULL COMMENT '内容',
+  `platform` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '平台',
+  `client` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '分类',
+  `title` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '标题',
+  `content` longtext COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '内容',
   `created_at` int(11) NOT NULL COMMENT '创建时间',
   `updated_at` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -181,16 +181,16 @@ CREATE TABLE `knowledge` (
 -- --------------------------------------------------------
 
 --
--- 表的结构 `node`
+-- Cấu trúc bảng cho bảng `node`
 --
 
 CREATE TABLE `node` (
   `id` int(11) NOT NULL,
-  `name` varchar(128) NOT NULL,
+  `name` varchar(128) COLLATE utf8mb4_unicode_ci NOT NULL,
   `status` tinyint(1) NOT NULL COMMENT '是否显示1显示0不显示',
-  `server` varchar(128) NOT NULL COMMENT '节点地址',
+  `server` varchar(128) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '节点地址',
   `custom_config` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL COMMENT '节点配置',
-  `node_flag` varchar(16) NOT NULL COMMENT '节点旗帜',
+  `node_flag` varchar(16) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '节点旗帜',
   `node_type` int(11) NOT NULL COMMENT '节点类型:1SS,2VMESS,3VLESS,4TROJAN,5SS-PLUGINS',
   `traffic_rate` float NOT NULL DEFAULT 1 COMMENT '流量倍率',
   `node_class` int(11) NOT NULL DEFAULT 0 COMMENT '节点等级',
@@ -201,7 +201,7 @@ CREATE TABLE `node` (
   `node_traffic_limit` bigint(20) NOT NULL DEFAULT 0 COMMENT '流量限制',
   `node_traffic_limit_reset_date` int(11) NOT NULL DEFAULT 0 COMMENT '节点流量限制重置日期',
   `node_heartbeat` bigint(20) NOT NULL DEFAULT 0,
-  `node_ip` varchar(39) DEFAULT NULL COMMENT '节点IP',
+  `node_ip` varchar(39) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT '节点IP',
   `node_group` int(11) NOT NULL DEFAULT 0 COMMENT '节点群组',
   `online` tinyint(1) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -209,21 +209,21 @@ CREATE TABLE `node` (
 -- --------------------------------------------------------
 
 --
--- 表的结构 `node_info`
+-- Cấu trúc bảng cho bảng `node_info`
 --
 
 CREATE TABLE `node_info` (
   `id` int(11) NOT NULL,
   `node_id` int(11) NOT NULL,
   `uptime` float NOT NULL,
-  `load` varchar(32) NOT NULL,
+  `load` varchar(32) COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
 --
--- 表的结构 `node_online_log`
+-- Cấu trúc bảng cho bảng `node_online_log`
 --
 
 CREATE TABLE `node_online_log` (
@@ -236,12 +236,12 @@ CREATE TABLE `node_online_log` (
 -- --------------------------------------------------------
 
 --
--- 表的结构 `order`
+-- Cấu trúc bảng cho bảng `order`
 --
 
 CREATE TABLE `order` (
   `id` int(11) NOT NULL COMMENT 'AUTO_INCREMENT',
-  `order_no` varchar(30) NOT NULL COMMENT '订单号',
+  `order_no` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '订单号',
   `order_type` int(11) NOT NULL COMMENT '订单类型:1购买产品2账户充值3续费产品4升级产品',
   `user_id` int(11) NOT NULL COMMENT '提交用户',
   `product_id` int(11) DEFAULT NULL COMMENT '订单商品',
@@ -265,22 +265,22 @@ CREATE TABLE `order` (
 -- --------------------------------------------------------
 
 --
--- 表的结构 `payment`
+-- Cấu trúc bảng cho bảng `payment`
 --
 
 CREATE TABLE `payment` (
   `id` int(11) NOT NULL COMMENT 'id',
-  `name` varchar(128) NOT NULL COMMENT '显示名称',
-  `gateway` varchar(128) NOT NULL COMMENT '支付网关',
-  `config` text NOT NULL COMMENT '网关配置文件',
-  `icon` text DEFAULT NULL COMMENT '图标url',
+  `name` varchar(128) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '显示名称',
+  `gateway` varchar(128) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '支付网关',
+  `config` text COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '网关配置文件',
+  `icon` text COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT '图标url',
   `percent_fee` int(11) DEFAULT NULL COMMENT '百分比手续费',
   `fixed_fee` int(11) DEFAULT NULL COMMENT '固定手续费',
   `recharge_bonus` int(11) DEFAULT NULL COMMENT '充值返利百分比',
-  `notify_domain` varchar(128) DEFAULT NULL COMMENT '通知域名',
+  `notify_domain` varchar(128) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT '通知域名',
   `enable` int(1) NOT NULL DEFAULT 0 COMMENT '开启',
   `sort` int(11) NOT NULL DEFAULT 0,
-  `uuid` varchar(36) NOT NULL,
+  `uuid` varchar(36) COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` int(11) NOT NULL,
   `updated_at` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -288,12 +288,12 @@ CREATE TABLE `payment` (
 -- --------------------------------------------------------
 
 --
--- 表的结构 `product`
+-- Cấu trúc bảng cho bảng `product`
 --
 
 CREATE TABLE `product` (
   `id` int(11) NOT NULL,
-  `name` varchar(50) NOT NULL COMMENT '产品名称',
+  `name` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '产品名称',
   `month_price` decimal(12,2) DEFAULT NULL COMMENT '产品价格',
   `quarter_price` decimal(12,2) DEFAULT NULL,
   `half_year_price` decimal(12,2) DEFAULT NULL,
@@ -312,19 +312,19 @@ CREATE TABLE `product` (
   `renew` tinyint(4) NOT NULL DEFAULT 1 COMMENT '开启续费',
   `stock` int(11) NOT NULL DEFAULT 0 COMMENT '库存0为不限制',
   `sales` int(11) NOT NULL DEFAULT 0 COMMENT '销量',
-  `custom_content` longtext DEFAULT NULL COMMENT '自定义商品介绍内容'
+  `custom_content` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT '自定义商品介绍内容'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
 --
--- 表的结构 `signin_ip`
+-- Cấu trúc bảng cho bảng `signin_ip`
 --
 
 CREATE TABLE `signin_ip` (
   `id` int(11) NOT NULL,
   `userid` int(11) NOT NULL,
-  `ip` varchar(39) NOT NULL,
+  `ip` varchar(39) COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` int(11) NOT NULL,
   `type` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -332,13 +332,13 @@ CREATE TABLE `signin_ip` (
 -- --------------------------------------------------------
 
 --
--- 表的结构 `ticket`
+-- Cấu trúc bảng cho bảng `ticket`
 --
 
 CREATE TABLE `ticket` (
   `id` int(11) NOT NULL,
-  `title` longtext NOT NULL COMMENT '工单主题',
-  `type` varchar(30) NOT NULL COMMENT '工单类型',
+  `title` longtext COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '工单主题',
+  `type` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '工单类型',
   `content` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL DEFAULT '‘’' COMMENT '工单内容',
   `userid` int(11) NOT NULL COMMENT '用户ID',
   `created_at` int(11) NOT NULL COMMENT '创建时间',
@@ -349,15 +349,15 @@ CREATE TABLE `ticket` (
 -- --------------------------------------------------------
 
 --
--- 表的结构 `user`
+-- Cấu trúc bảng cho bảng `user`
 --
 
 CREATE TABLE `user` (
   `id` int(11) NOT NULL,
-  `email` varchar(32) NOT NULL COMMENT '注册邮箱',
-  `password` varchar(256) NOT NULL COMMENT '登录密码',
-  `passwd` varchar(256) DEFAULT NULL COMMENT 'SS 密码',
-  `uuid` varchar(36) NOT NULL COMMENT 'VMESS/TROJAN UUID',
+  `email` varchar(32) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '注册邮箱',
+  `password` varchar(256) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '登录密码',
+  `passwd` varchar(256) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT 'SS 密码',
+  `uuid` varchar(36) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'VMESS/TROJAN UUID',
   `t` int(11) NOT NULL DEFAULT 0,
   `u` bigint(20) NOT NULL DEFAULT 0,
   `d` bigint(20) NOT NULL DEFAULT 0,
@@ -372,51 +372,51 @@ CREATE TABLE `user` (
   `last_signin_time` datetime DEFAULT NULL COMMENT '最后登录时间',
   `signup_date` datetime NOT NULL COMMENT '注册日期',
   `money` decimal(12,2) NOT NULL COMMENT '金钱',
-  `notify_type` varchar(32) DEFAULT NULL COMMENT '接收通知的的方式',
+  `notify_type` varchar(32) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT '接收通知的的方式',
   `ref_by` int(11) NOT NULL DEFAULT 0 COMMENT '推荐人',
-  `signup_ip` varchar(39) NOT NULL DEFAULT '127.0.0.1' COMMENT '注册IP',
+  `signup_ip` varchar(39) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '127.0.0.1' COMMENT '注册IP',
   `node_speedlimit` int(11) NOT NULL DEFAULT 0 COMMENT '端口速度',
   `node_iplimit` int(11) NOT NULL DEFAULT 0 COMMENT 'IP限制',
   `is_admin` tinyint(1) NOT NULL DEFAULT 0 COMMENT '是否是管理员1是0不是',
   `last_day_t` bigint(20) NOT NULL DEFAULT 0,
   `class` int(11) NOT NULL DEFAULT 0 COMMENT '等级',
   `class_expire` datetime NOT NULL DEFAULT '1989-06-04 00:05:00' COMMENT '等级到期时间',
-  `theme` varchar(30) NOT NULL,
-  `remark` varchar(30) DEFAULT NULL COMMENT '备注',
+  `theme` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `remark` varchar(30) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT '备注',
   `node_group` int(11) NOT NULL DEFAULT 0 COMMENT '分组',
   `telegram_id` bigint(20) DEFAULT NULL,
   `traffic_notified` tinyint(1) DEFAULT 0,
   `rebate` int(11) NOT NULL DEFAULT -1 COMMENT '返利百分比',
   `commission` decimal(12,2) NOT NULL DEFAULT 0.00 COMMENT '返利金额',
-  `withdraw_account` varchar(50) DEFAULT NULL,
+  `withdraw_account` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `verified` tinyint(1) NOT NULL DEFAULT 0 COMMENT '账户是否被验证',
-  `subscription_token` varchar(36) NOT NULL COMMENT '订阅token'
+  `subscription_token` varchar(36) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '订阅token'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
 --
--- 表的结构 `user_access`
+-- Cấu trúc bảng cho bảng `user_access`
 --
 
 CREATE TABLE `user_access` (
   `id` bigint(20) NOT NULL,
   `user_id` int(11) NOT NULL,
   `node_id` int(11) NOT NULL,
-  `type` char(10) NOT NULL,
-  `address` varchar(255) NOT NULL,
+  `type` char(10) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `address` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
 --
--- 表的结构 `user_invite_code`
+-- Cấu trúc bảng cho bảng `user_invite_code`
 --
 
 CREATE TABLE `user_invite_code` (
   `id` int(11) NOT NULL,
-  `code` varchar(50) NOT NULL,
+  `code` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
   `user_id` int(11) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `updated_at` timestamp NOT NULL DEFAULT '2016-06-01 00:00:00'
@@ -425,27 +425,27 @@ CREATE TABLE `user_invite_code` (
 -- --------------------------------------------------------
 
 --
--- 表的结构 `user_subscribe_log`
+-- Cấu trúc bảng cho bảng `user_subscribe_log`
 --
 
 CREATE TABLE `user_subscribe_log` (
   `id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL COMMENT '用户 ID',
-  `email` varchar(32) NOT NULL COMMENT '用户邮箱',
-  `request_ip` varchar(39) NOT NULL COMMENT '请求 IP',
+  `email` varchar(32) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '用户邮箱',
+  `request_ip` varchar(39) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '请求 IP',
   `created_at` int(11) NOT NULL COMMENT '请求时间',
-  `request_user_agent` text DEFAULT NULL COMMENT '请求 UA 信息'
+  `request_user_agent` text COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT '请求 UA 信息'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='用户订阅日志';
 
 -- --------------------------------------------------------
 
 --
--- 表的结构 `user_token`
+-- Cấu trúc bảng cho bảng `user_token`
 --
 
 CREATE TABLE `user_token` (
   `id` int(11) NOT NULL,
-  `token` varchar(256) NOT NULL,
+  `token` varchar(256) COLLATE utf8mb4_unicode_ci NOT NULL,
   `user_id` int(11) NOT NULL,
   `created_at` int(11) NOT NULL,
   `expired_at` int(11) NOT NULL,
@@ -455,7 +455,7 @@ CREATE TABLE `user_token` (
 -- --------------------------------------------------------
 
 --
--- 表的结构 `user_traffic_log`
+-- Cấu trúc bảng cho bảng `user_traffic_log`
 --
 
 CREATE TABLE `user_traffic_log` (
@@ -465,14 +465,14 @@ CREATE TABLE `user_traffic_log` (
   `d` bigint(20) NOT NULL,
   `node_id` int(11) NOT NULL,
   `rate` float NOT NULL,
-  `traffic` varchar(32) NOT NULL,
+  `traffic` varchar(32) COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` int(11) NOT NULL COMMENT '记录时间'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
 --
--- 表的结构 `withdraw_log`
+-- Cấu trúc bảng cho bảng `withdraw_log`
 --
 
 CREATE TABLE `withdraw_log` (
@@ -485,123 +485,123 @@ CREATE TABLE `withdraw_log` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- 转储表的索引
+-- Chỉ mục cho các bảng đã đổ
 --
 
 --
--- 表的索引 `alive_ip`
+-- Chỉ mục cho bảng `alive_ip`
 --
 ALTER TABLE `alive_ip`
   ADD PRIMARY KEY (`id`);
 
 --
--- 表的索引 `announcement`
+-- Chỉ mục cho bảng `announcement`
 --
 ALTER TABLE `announcement`
   ADD PRIMARY KEY (`id`);
 
 --
--- 表的索引 `commission`
+-- Chỉ mục cho bảng `commission`
 --
 ALTER TABLE `commission`
   ADD PRIMARY KEY (`id`);
 
 --
--- 表的索引 `config`
+-- Chỉ mục cho bảng `config`
 --
 ALTER TABLE `config`
   ADD PRIMARY KEY (`id`);
 
 --
--- 表的索引 `coupon`
+-- Chỉ mục cho bảng `coupon`
 --
 ALTER TABLE `coupon`
   ADD PRIMARY KEY (`id`);
 
 --
--- 表的索引 `detect_ban_log`
+-- Chỉ mục cho bảng `detect_ban_log`
 --
 ALTER TABLE `detect_ban_log`
   ADD PRIMARY KEY (`id`),
   ADD KEY `user_id` (`user_id`);
 
 --
--- 表的索引 `detect_list`
+-- Chỉ mục cho bảng `detect_list`
 --
 ALTER TABLE `detect_list`
   ADD PRIMARY KEY (`id`);
 
 --
--- 表的索引 `detect_log`
+-- Chỉ mục cho bảng `detect_log`
 --
 ALTER TABLE `detect_log`
   ADD PRIMARY KEY (`id`),
   ADD KEY `detect_log_ibfk_5` (`node_id`);
 
 --
--- 表的索引 `email_queue`
+-- Chỉ mục cho bảng `email_queue`
 --
 ALTER TABLE `email_queue`
   ADD PRIMARY KEY (`id`);
 
 --
--- 表的索引 `knowledge`
+-- Chỉ mục cho bảng `knowledge`
 --
 ALTER TABLE `knowledge`
   ADD PRIMARY KEY (`id`);
 
 --
--- 表的索引 `node`
+-- Chỉ mục cho bảng `node`
 --
 ALTER TABLE `node`
   ADD PRIMARY KEY (`id`);
 
 --
--- 表的索引 `node_info`
+-- Chỉ mục cho bảng `node_info`
 --
 ALTER TABLE `node_info`
   ADD PRIMARY KEY (`id`),
   ADD KEY `node_info_ibfk_2` (`node_id`);
 
 --
--- 表的索引 `node_online_log`
+-- Chỉ mục cho bảng `node_online_log`
 --
 ALTER TABLE `node_online_log`
   ADD PRIMARY KEY (`id`),
   ADD KEY `node_online_log_ibfk_3` (`node_id`);
 
 --
--- 表的索引 `order`
+-- Chỉ mục cho bảng `order`
 --
 ALTER TABLE `order`
   ADD PRIMARY KEY (`id`);
 
 --
--- 表的索引 `payment`
+-- Chỉ mục cho bảng `payment`
 --
 ALTER TABLE `payment`
   ADD PRIMARY KEY (`id`);
 
 --
--- 表的索引 `product`
+-- Chỉ mục cho bảng `product`
 --
 ALTER TABLE `product`
   ADD PRIMARY KEY (`id`);
 
 --
--- 表的索引 `signin_ip`
+-- Chỉ mục cho bảng `signin_ip`
 --
 ALTER TABLE `signin_ip`
   ADD PRIMARY KEY (`id`);
 
 --
--- 表的索引 `ticket`
+-- Chỉ mục cho bảng `ticket`
 --
 ALTER TABLE `ticket`
   ADD PRIMARY KEY (`id`);
 
 --
--- 表的索引 `user`
+-- Chỉ mục cho bảng `user`
 --
 ALTER TABLE `user`
   ADD PRIMARY KEY (`id`),
@@ -609,220 +609,220 @@ ALTER TABLE `user`
   ADD UNIQUE KEY `uuid` (`uuid`) USING BTREE;
 
 --
--- 表的索引 `user_access`
+-- Chỉ mục cho bảng `user_access`
 --
 ALTER TABLE `user_access`
   ADD PRIMARY KEY (`id`);
 
 --
--- 表的索引 `user_invite_code`
+-- Chỉ mục cho bảng `user_invite_code`
 --
 ALTER TABLE `user_invite_code`
   ADD PRIMARY KEY (`id`),
   ADD KEY `user_id` (`user_id`);
 
 --
--- 表的索引 `user_subscribe_log`
+-- Chỉ mục cho bảng `user_subscribe_log`
 --
 ALTER TABLE `user_subscribe_log`
   ADD PRIMARY KEY (`id`) USING BTREE;
 
 --
--- 表的索引 `user_token`
+-- Chỉ mục cho bảng `user_token`
 --
 ALTER TABLE `user_token`
   ADD PRIMARY KEY (`id`);
 
 --
--- 表的索引 `user_traffic_log`
+-- Chỉ mục cho bảng `user_traffic_log`
 --
 ALTER TABLE `user_traffic_log`
   ADD PRIMARY KEY (`id`);
 
 --
--- 表的索引 `withdraw_log`
+-- Chỉ mục cho bảng `withdraw_log`
 --
 ALTER TABLE `withdraw_log`
   ADD PRIMARY KEY (`id`) USING BTREE;
 
 --
--- 在导出的表使用AUTO_INCREMENT
+-- AUTO_INCREMENT cho các bảng đã đổ
 --
 
 --
--- 使用表AUTO_INCREMENT `alive_ip`
+-- AUTO_INCREMENT cho bảng `alive_ip`
 --
 ALTER TABLE `alive_ip`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT;
 
 --
--- 使用表AUTO_INCREMENT `announcement`
+-- AUTO_INCREMENT cho bảng `announcement`
 --
 ALTER TABLE `announcement`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- 使用表AUTO_INCREMENT `commission`
+-- AUTO_INCREMENT cho bảng `commission`
 --
 ALTER TABLE `commission`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- 使用表AUTO_INCREMENT `config`
+-- AUTO_INCREMENT cho bảng `config`
 --
 ALTER TABLE `config`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键';
 
 --
--- 使用表AUTO_INCREMENT `coupon`
+-- AUTO_INCREMENT cho bảng `coupon`
 --
 ALTER TABLE `coupon`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- 使用表AUTO_INCREMENT `detect_ban_log`
+-- AUTO_INCREMENT cho bảng `detect_ban_log`
 --
 ALTER TABLE `detect_ban_log`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- 使用表AUTO_INCREMENT `detect_list`
+-- AUTO_INCREMENT cho bảng `detect_list`
 --
 ALTER TABLE `detect_list`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- 使用表AUTO_INCREMENT `detect_log`
+-- AUTO_INCREMENT cho bảng `detect_log`
 --
 ALTER TABLE `detect_log`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- 使用表AUTO_INCREMENT `email_queue`
+-- AUTO_INCREMENT cho bảng `email_queue`
 --
 ALTER TABLE `email_queue`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- 使用表AUTO_INCREMENT `knowledge`
+-- AUTO_INCREMENT cho bảng `knowledge`
 --
 ALTER TABLE `knowledge`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- 使用表AUTO_INCREMENT `node`
+-- AUTO_INCREMENT cho bảng `node`
 --
 ALTER TABLE `node`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- 使用表AUTO_INCREMENT `node_info`
+-- AUTO_INCREMENT cho bảng `node_info`
 --
 ALTER TABLE `node_info`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- 使用表AUTO_INCREMENT `node_online_log`
+-- AUTO_INCREMENT cho bảng `node_online_log`
 --
 ALTER TABLE `node_online_log`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- 使用表AUTO_INCREMENT `order`
+-- AUTO_INCREMENT cho bảng `order`
 --
 ALTER TABLE `order`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'AUTO_INCREMENT';
 
 --
--- 使用表AUTO_INCREMENT `payment`
+-- AUTO_INCREMENT cho bảng `payment`
 --
 ALTER TABLE `payment`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'id';
 
 --
--- 使用表AUTO_INCREMENT `product`
+-- AUTO_INCREMENT cho bảng `product`
 --
 ALTER TABLE `product`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- 使用表AUTO_INCREMENT `signin_ip`
+-- AUTO_INCREMENT cho bảng `signin_ip`
 --
 ALTER TABLE `signin_ip`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- 使用表AUTO_INCREMENT `ticket`
+-- AUTO_INCREMENT cho bảng `ticket`
 --
 ALTER TABLE `ticket`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- 使用表AUTO_INCREMENT `user`
+-- AUTO_INCREMENT cho bảng `user`
 --
 ALTER TABLE `user`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- 使用表AUTO_INCREMENT `user_access`
+-- AUTO_INCREMENT cho bảng `user_access`
 --
 ALTER TABLE `user_access`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT;
 
 --
--- 使用表AUTO_INCREMENT `user_invite_code`
+-- AUTO_INCREMENT cho bảng `user_invite_code`
 --
 ALTER TABLE `user_invite_code`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- 使用表AUTO_INCREMENT `user_subscribe_log`
+-- AUTO_INCREMENT cho bảng `user_subscribe_log`
 --
 ALTER TABLE `user_subscribe_log`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- 使用表AUTO_INCREMENT `user_token`
+-- AUTO_INCREMENT cho bảng `user_token`
 --
 ALTER TABLE `user_token`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- 使用表AUTO_INCREMENT `user_traffic_log`
+-- AUTO_INCREMENT cho bảng `user_traffic_log`
 --
 ALTER TABLE `user_traffic_log`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT;
 
 --
--- 使用表AUTO_INCREMENT `withdraw_log`
+-- AUTO_INCREMENT cho bảng `withdraw_log`
 --
 ALTER TABLE `withdraw_log`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- 限制导出的表
+-- Các ràng buộc cho các bảng đã đổ
 --
 
 --
--- 限制表 `detect_log`
+-- Các ràng buộc cho bảng `detect_log`
 --
 ALTER TABLE `detect_log`
   ADD CONSTRAINT `detect_log_ibfk_5` FOREIGN KEY (`node_id`) REFERENCES `node` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- 限制表 `node_info`
+-- Các ràng buộc cho bảng `node_info`
 --
 ALTER TABLE `node_info`
   ADD CONSTRAINT `node_info_ibfk_2` FOREIGN KEY (`node_id`) REFERENCES `node` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- 限制表 `node_online_log`
+-- Các ràng buộc cho bảng `node_online_log`
 --
 ALTER TABLE `node_online_log`
   ADD CONSTRAINT `node_online_log_ibfk_3` FOREIGN KEY (`node_id`) REFERENCES `node` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- 限制表 `user_invite_code`
+-- Các ràng buộc cho bảng `user_invite_code`
 --
 ALTER TABLE `user_invite_code`
   ADD CONSTRAINT `user_invite_code_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`) ON DELETE CASCADE;

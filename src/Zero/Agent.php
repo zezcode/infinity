@@ -78,7 +78,7 @@ class Agent extends \App\Controllers\BaseController
                 $data = [];
                 foreach ($query['datas'] as $value) {
                     $tempdata['id'] = $value->id;
-                    $tempdata['type'] = ($value->type === 1 ? 'Chuyển vào số dư tài khoản' : 'USDT提现');
+                    $tempdata['type'] = ($value->type === 1 ? 'Chuyển vào số dư tài khoản' : 'Rút tiền mặt');
                     $tempdata['total'] = $value->total;
                     $tempdata['status'] = $value->status;
                     $tempdata['datetime'] = date("Y-m-d H:i:s", $value->datetime);
