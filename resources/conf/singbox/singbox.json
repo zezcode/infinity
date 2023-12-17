@@ -9,14 +9,6 @@
       {
         "domain_suffix": [".arpa.", ".arpa"],
         "server": "dns-block"
-      },
-      {
-        "clash_mode": "direct",
-        "server": "dns_direct"
-      },
-      {
-        "clash_mode": "global",
-        "server": "dns_proxy"
       }
     ],
     "servers": [
@@ -46,26 +38,25 @@
   },
   "experimental": {
     "clash_api": {
-      "external_controller": "0.0.0.0:9090",
-      "external_ui": "metacubexd",
-      "external_ui_download_url": "https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip",
-      "external_ui_download_detour": "select",
-      "secret": "",
-      "default_mode": "rule",
-      "store_selected": true,
-      "cache_file": "cache.db"
+      "cache_file": "",
+      "external_controller": "127.0.0.1:9090",
+      "external_ui": "../files/yacd",
+      "store_selected": true
     }
   },
   "inbounds": [
     {
       "type": "tun",
-      "inet4_address": "198.18.0.1/16",
+      "tag": "tun-in",
+      "interface_name": "tun0",
+      "inet4_address": "172.19.0.1/30",
+      "inet6_address": "fdfe:dcba:9876::1/126",
+      "mtu": 1358,
       "auto_route": true,
       "strict_route": true,
-      "endpoint_independent_nat": false,
-      "stack": "system",
-      "sniff": true,
-      "sniff_override_destination": false
+      "stack": "gvisor",
+      "endpoint_independent_nat": true,
+      "sniff": true
     }
   ],
   "outbounds": [
@@ -91,6 +82,10 @@
       {
         "geoip": ["!cn"],
         "geosite": ["geolocation-!cn"],
+        "outbound": "Proxy"
+      },
+      {
+        "ip_cidr": ["8.8.8.8"],
         "outbound": "Proxy"
       }
     ]
