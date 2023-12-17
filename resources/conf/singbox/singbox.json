@@ -7,11 +7,16 @@
   "dns": {
     "rules": [
       {
-        "domain_suffix": [
-          ".arpa.",
-          ".arpa"
-        ],
+        "domain_suffix": [".arpa.", ".arpa"],
         "server": "dns-block"
+      },
+      {
+        "clash_mode": "direct",
+        "server": "dns_direct"
+      },
+      {
+        "clash_mode": "global",
+        "server": "dns_proxy"
       }
     ],
     "servers": [
@@ -41,10 +46,14 @@
   },
   "experimental": {
     "clash_api": {
-      "cache_file": "",
-      "external_controller": "127.0.0.1:9090",
-      "external_ui": "../files/yacd",
-      "store_selected": true
+      "external_controller": "0.0.0.0:9090",
+      "external_ui": "metacubexd",
+      "external_ui_download_url": "https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip",
+      "external_ui_download_detour": "select",
+      "secret": "",
+      "default_mode": "rule",
+      "store_selected": true,
+      "cache_file": "cache.db"
     }
   },
   "inbounds": [
@@ -66,71 +75,15 @@
     {
       "tag": "Proxy",
       "type": "selector",
-      "outbounds": [
-        "Auto"
-      ]
-    },
-    {
-      "tag": "Telegram",
-      "type": "selector",
-      "outbounds": [
-        "Proxy"
-      ]
-    },
-    {
-      "tag": "Google",
-      "type": "selector",
-      "outbounds": [
-        "Proxy"
-      ]
-    },
-    {
-      "tag": "Youtube",
-      "type": "selector",
-      "outbounds": [
-        "Proxy"
-      ]
-    },
-    {
-      "tag": "Twitter",
-      "type": "selector",
-      "outbounds": [
-        "Proxy"
-      ]
+      "outbounds": ["Auto"]
     },
     {
       "tag": "Auto",
       "type": "urltest",
-      "outbounds": [
-        
-      ],
+      "outbounds": [],
       "url": "https://detectportal.firefox.com/success.txt",
       "interval": "60s",
       "tolerance": 0
-    },
-    {
-      "tag": "ADs",
-      "type": "selector",
-      "outbounds": [
-        "block",
-        "Proxy"
-      ]
-    },
-    {
-      "tag": "direct",
-      "type": "direct"
-    },
-    {
-      "tag": "bypass",
-      "type": "direct"
-    },
-    {
-      "tag": "block",
-      "type": "block"
-    },
-    {
-      "tag": "dns-out",
-      "type": "dns"
     }
   ],
   "route": {
@@ -139,90 +92,9 @@
     "final": "Proxy",
     "rules": [
       {
-        "geosite": [
-          "category-ads-all"
-        ],
-        "outbound": "ADs"
-      },
-      {
-        "geoip": [
-          "telegram"
-        ],
-        "geosite": [
-          "telegram"
-        ],
-        "outbound": "Telegram"
-      },
-      {
-          "geoip": [
-            "twitter"
-          ],
-          "geosite": [
-            "twitter"
-          ],
-          "outbound": "Twitter"
-      },
-      {
-        "geosite": [
-          "youtube"
-        ],
-        "outbound": "Youtube"
-    },
-      {
-          "geoip": [
-            "google"
-          ],
-          "geosite": [
-            "google"
-          ],
-          "outbound": "Google"
-      },
-      {
-        "geoip": [
-          "!cn"
-        ],
-        "geosite": [
-          "geolocation-!cn"
-        ],
+        "geoip": ["!cn"],
+        "geosite": ["geolocation-!cn"],
         "outbound": "Proxy"
-      },
-      {
-        "geoip": [
-          "cn"
-        ],
-        "geosite": [
-          "geolocation-cn"
-        ],
-        "outbound": "direct"
-      },
-      {
-        "ip_cidr": [
-          "8.8.8.8"
-        ],
-        "outbound": "Proxy"
-      },
-      {
-        "inbound": [
-          "dns-in"
-        ],
-        "outbound": "dns-out"
-      },
-      {
-        "outbound": "dns-out",
-        "port": [
-          53
-        ]
-      },
-      {
-        "ip_cidr": [
-          "224.0.0.0/3",
-          "ff00::/8"
-        ],
-        "outbound": "block",
-        "source_ip_cidr": [
-          "224.0.0.0/3",
-          "ff00::/8"
-        ]
       }
     ]
   }

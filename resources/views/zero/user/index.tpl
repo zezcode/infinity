@@ -55,16 +55,38 @@
 									</span>
 									<div class="d-flex flex-column flex-grow-1 mr-2">
 										<a class="fs-lg fw-bolder text-gray-800 mb-1">
-											{if $user->class >= 1}
+											{if $user->class_expire >= '2050-01-01 00:00:00'}
+												<span class="counter">Hạn sử dụng:&nbsp;<span>Vĩnh Viễn</span></span>
+											{else if $user->class_expire > $smarty.now|date_format:"%Y-%m-%d %H:%M:%S"}
 												<span class="counter">Hạn sử dụng:&nbsp;<span
 														id="user_class_expired_time"></span></span>
-											{else if $user->class <= 0} <span class="counter">Hạn sử dụng:&nbsp;Chưa mua
-													gói</span>
+											{else}
+												<span class="counter">Hạn sử dụng:&nbsp;Chưa mua gói</span>
+											{/if}
+										</a>
+										<span class="text-muted fw-semibold d-block">
+											{if $user->class_expire >= '2050-01-01 00:00:00'}
+												Ngày hết hạn:&nbsp;Vô thời hạn
+											{else if $user->class_expire > $smarty.now|date_format:"%Y-%m-%d %H:%M:%S"}
+												Ngày hết hạn:&nbsp;{substr($user->class_expire, 0, 10)}
+											{else}
+												<span></span>
+											{/if}
+										</span>
+									</div>
+									<div class="d-flex flex-column flex-grow-1 mr-2">
+										<a class="fs-lg fw-bolder text-gray-800 mb-1">
+											{if $user->class >= 1}
+												<span style="display:none">Hạn sử dụng:&nbsp;<span
+														id="user_class_expired_time"></span></span>
+											{else if $user->class <= 0} 
+												<!--<span class="counter">Hạn sử dụng:&nbsp;Chưa mua
+													gói</span>-->
 											{/if}
 										</a>
 										<span class="text-muted fw-semibold d-block">
 											{if $user->class >= 1}
-												Ngày hết hạn:&nbsp;{substr($user->class_expire, 0, 10)}
+												<!--Ngày hết hạn:&nbsp;{substr($user->class_expire, 0, 10)}-->
 											{/if}
 										</span>
 									</div>
