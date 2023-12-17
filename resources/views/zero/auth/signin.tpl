@@ -27,10 +27,10 @@
 									<h1 class="text-dark fw-bolder mb-6">Đăng nhập</h1>
 								</div>
 								<div class="fv-row mb-8">
-									<input type="text" placeholder="email" name="email" autocomplete="off" id="signin-email" data-kt-translate="sign-in-input-email" class="form-control form-control-lg bg-transparent" />
+									<input type="text" placeholder="Email" name="email" autocomplete="off" id="signin-email" data-kt-translate="sign-in-input-email" class="form-control form-control-lg bg-transparent" />
 								</div>
 								<div class="fv-row mb-8">
-									<input type="password" placeholder="passwd" name="password" autocomplete="off" id="signin-passwd" data-kt-translate="sign-in-input-password" class="form-control form-control-lg bg-transparent" />
+									<input type="password" placeholder="Mật khẩu" name="password" autocomplete="off" id="signin-passwd" data-kt-translate="sign-in-input-password" class="form-control form-control-lg bg-transparent" />
 								</div>
 								{if $config['enable_signin_captcha'] == true && $config['captcha_provider'] == 'turnstile' && $captcha['turnstile_sitekey'] != ''}
 									<div class="fv-row mb-8">

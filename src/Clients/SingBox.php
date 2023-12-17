@@ -212,14 +212,17 @@ class SingBox
                 'server_name' => $server['sni'],
                 'insecure' => true,
                 'utls' => [
-                    'enabled' => false,
+                    'enabled' => true,
                     'fingerprint' => 'chrome',
                 ],
             ],
             'multiplex' => [
-                'enabled' => false,
+                'enabled' => true,
                 'protocol' => 'smux',
                 'max_streams' => 32,
+                'min_streams' => 4,
+                'padding' => false,
+                'brutal' => ''
             ],
         ];
 
